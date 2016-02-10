@@ -235,6 +235,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!--/slider -->
 <div class="main">
 	<div class="wrap">
+           
 		<div class="section group">
 		  <div class="cont span_2_of_3">
 		  	<h2 class="head">Featured Products</h2>
@@ -554,37 +555,24 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="clear"></div>
 			</div>			 						 			    
 		  </div>
-			<div class="rsidebar span_1_of_left">
-				<div class="top-border"> </div>
-				 <div class="border">
-                                     <link href="<c:url   value="/resources/default.css" />" rel="stylesheet" type="text/css" media="all" />
-                                     <link href="<c:url value="/resources/css/nivo-slider.css" />" rel="stylesheet" type="text/css" media="all" />
-                                     <script src="<c:url value="/resources/js/jquery.nivo.slider.js" />"></script>
-				    <script type="text/javascript">
-				    $(window).load(function() {
-				        $('#slider').nivoSlider();
-				    });
-				    </script>
-		    <div class="slider-wrapper theme-default">
-              <div id="slider" class="nivoSlider">
-                  <img src="<c:url      value="/resources/images/t-img1.jpg"/>"  alt="" />
-                  <img src="<c:url value="/resources/images/t-img2.jpg" />"  alt="" />
-                  <img src="<c:url   value="/resources/images/t-img3.jpg" />"  alt="" />
-              </div>
-             </div>
+                                        <div class="rsidebar span_1_of_left" style="background-color:#4cb1ca ">
+				
+                                            <div class="border" >
+                                
+				    <h3>Categories </h3>
+                                    <ul class="f-list1"  >
+						    <li><a href="#">Categories 1</a></li>
+				            <li><a href="#">Categories 2 </a></li>
+				            <li><a href="#">Categories 3</a></li>
+                                            
+				             
+			         	</ul>
+ 				
+		
              
              </div>
-           <div class="top-border"> </div>
-			<div class="sidebar-bottom">
-			    <h2 class="m_1">Newsletters<br> Signup</h2>
-			    <p class="m_text">Lorem ipsum dolor sit amet, consectetuer</p>
-			    <div class="subscribe">
-					 <form>
-					    <input name="userName" type="text" class="textbox">
-					    <input type="submit" value="Subscribe">
-					 </form>
-	  			</div>
-			</div>
+           
+			
 	    </div>
 	   <div class="clear"></div>
 	</div>
