@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 10, 2016 1:49:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="sa33erDB" name="model.Authority" optimistic-lock="version" table="authority">
+    <id name="authId" type="java.lang.Integer">
+      <column name="auth_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="name" type="string">
+      <column length="45" name="name" not-null="true"/>
+    </property>
+    <property name="description" type="string">
+      <column length="45" name="description" not-null="true"/>
+    </property>
+    <property name="createdBy" type="java.lang.Integer">
+      <column name="created_by"/>
+    </property>
+    <property name="createdTimestamp" type="timestamp">
+      <column length="19" name="created_timestamp"/>
+    </property>
+    <property name="updatedBy" type="java.lang.Integer">
+      <column name="updated_by"/>
+    </property>
+    <property name="updatedTimestamp" type="timestamp">
+      <column length="19" name="updated_timestamp"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="permissions" table="permission">
+      <key>
+        <column name="auth_id" not-null="true"/>
+      </key>
+      <one-to-many class="model.Permission"/>
+    </set>
+  </class>
+</hibernate-mapping>

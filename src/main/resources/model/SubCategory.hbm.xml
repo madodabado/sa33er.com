@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 10, 2016 1:49:25 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="sa33erDB" name="model.SubCategory" optimistic-lock="version" table="sub_category">
+    <id name="subCategoryId" type="java.lang.Integer">
+      <column name="sub_category_id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="model.Category" fetch="select" name="category">
+      <column name="category_id" not-null="true"/>
+    </many-to-one>
+    <property name="categoryName" type="string">
+      <column length="45" name="category_name" not-null="true"/>
+    </property>
+    <property name="subCategoryName" type="string">
+      <column length="45" name="sub_category_name" not-null="true"/>
+    </property>
+    <property name="description" type="string">
+      <column length="45" name="description" not-null="true"/>
+    </property>
+    <property name="reference01" type="string">
+      <column length="45" name="reference01"/>
+    </property>
+    <property name="reference02" type="string">
+      <column length="45" name="reference02"/>
+    </property>
+    <property name="reference03" type="string">
+      <column length="45" name="reference03"/>
+    </property>
+    <property name="reference04" type="string">
+      <column length="45" name="reference04"/>
+    </property>
+    <property name="reference05" type="string">
+      <column length="45" name="reference05"/>
+    </property>
+    <property name="reference06" type="string">
+      <column length="45" name="reference06"/>
+    </property>
+    <property name="reference07" type="string">
+      <column length="45" name="reference07"/>
+    </property>
+    <property name="reference08" type="string">
+      <column length="45" name="reference08"/>
+    </property>
+    <property name="reference09" type="string">
+      <column length="45" name="reference09"/>
+    </property>
+    <property name="reference10" type="string">
+      <column length="45" name="reference10"/>
+    </property>
+    <property name="reference11" type="string">
+      <column length="45" name="reference11"/>
+    </property>
+    <property name="reference12" type="string">
+      <column length="45" name="reference12"/>
+    </property>
+    <property name="reference13" type="string">
+      <column length="45" name="reference13"/>
+    </property>
+    <property name="reference14" type="string">
+      <column length="45" name="reference14"/>
+    </property>
+    <property name="reference15" type="string">
+      <column length="45" name="reference15"/>
+    </property>
+    <property name="reference16" type="string">
+      <column length="45" name="reference16"/>
+    </property>
+    <property name="reference17" type="string">
+      <column length="45" name="reference17"/>
+    </property>
+    <property name="reference18" type="string">
+      <column length="45" name="reference18"/>
+    </property>
+    <property name="reference19" type="string">
+      <column length="45" name="reference19"/>
+    </property>
+    <property name="reference20" type="string">
+      <column length="45" name="reference20"/>
+    </property>
+    <property name="price" type="double">
+      <column name="price" not-null="true" precision="22" scale="0"/>
+    </property>
+    <property name="createdBy" type="java.lang.Integer">
+      <column name="created_by"/>
+    </property>
+    <property name="createdTimestamp" type="timestamp">
+      <column length="19" name="created_timestamp"/>
+    </property>
+    <property name="updatedBy" type="java.lang.Integer">
+      <column name="updated_by"/>
+    </property>
+    <property name="updatedTimestamp" type="timestamp">
+      <column length="19" name="updated_timestamp"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="storeProducts" table="store_product">
+      <key>
+        <column name="subcategory_id" not-null="true"/>
+      </key>
+      <one-to-many class="model.StoreProduct"/>
+    </set>
+  </class>
+</hibernate-mapping>
