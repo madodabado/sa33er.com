@@ -1,5 +1,5 @@
 <%-- 
-    Document   : هىيثء
+    Document   : Mado
     Created on : Jan 26, 2016, 12:19:31 PM
     Author     : Mado
 --%>
@@ -80,7 +80,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li class="active"><a href="login.html">Account</a></li> |
+					<li class="active"><a href="./login">Account</a></li> |
 					<li><a href="checkout.html">Wishlist</a></li> |
 					
 					<li><a href="login.html">Log In</a></li> |
@@ -94,11 +94,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-                                    <a href="index.html"><img src="<c:url value="/resources/images/logo.png" />" alt="" height="100px"/></a>
+                                    <a href="/"><img src="<c:url value="/resources/images/logo.png" />" alt="" height="100px"/></a>
 				</div>
 				<div class="menu">
 	            <ul class="megamenu skyblue">
-			<li class="active grid"><a href="index.html">Home</a></li>
+			<li class="active grid"><a href="/">Home</a></li>
 			<li><a class="color4" href="#">women</a>
 				<div class="megapanel">
 					<div class="row">
