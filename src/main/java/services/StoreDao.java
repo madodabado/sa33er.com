@@ -7,32 +7,32 @@ package services;
 
 import exceptionshandler.DataAccessLayerException;
 import java.util.List;
-import model.Category;
+import model.Store;
 
 /**
  *
  * @author Mado
  */
-public class CategoryDao extends AbstractDao{
-    public CategoryDao(){
+public class StoreDao extends AbstractDao{
+    public StoreDao(){
         super();
     }
     
-     /**
+    /**
      * 
-     * @param category
+     * @param store
      * @throws DataAccessLayerException 
      */
-      public void create(Category category) throws DataAccessLayerException {
-        super.saveOrUpdate(category);
+      public void create(Store store) throws DataAccessLayerException {
+        super.saveOrUpdate(store);
     }
       /**
        * 
-       * @param category
+       * @param store
        * @throws DataAccessLayerException 
        */
-     public void delete(Category category) throws DataAccessLayerException {
-        super.delete(category);
+     public void delete(Store store) throws DataAccessLayerException {
+        super.delete(store);
     }
       /**
        * 
@@ -42,16 +42,16 @@ public class CategoryDao extends AbstractDao{
        */
         public List find(int Id) throws DataAccessLayerException {
            
-        return  super.find(Category.class, Id ,"category_id");
+        return  super.find(Store.class, Id ,"store_id");
         
     }
         /**
          * 
-         * @param category
+         * @param store
          * @throws DataAccessLayerException 
          */
-         public void update(Category category) throws DataAccessLayerException {
-        super.saveOrUpdate(category);
+         public void update(Store store) throws DataAccessLayerException {
+        super.saveOrUpdate(store);
     }
          /**
           * 
@@ -59,7 +59,7 @@ public class CategoryDao extends AbstractDao{
           * @throws DataAccessLayerException 
           */
            public List findAll() throws DataAccessLayerException {
-        return super.findAll(Category.class);
+        return super.findAll(Store.class);
     } 
            
            

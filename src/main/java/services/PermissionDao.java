@@ -7,32 +7,33 @@ package services;
 
 import exceptionshandler.DataAccessLayerException;
 import java.util.List;
-import model.Category;
+import model.Permission;
 
 /**
  *
  * @author Mado
  */
-public class CategoryDao extends AbstractDao{
-    public CategoryDao(){
+public class PermissionDao extends AbstractDao {
+    public PermissionDao(){
         super();
     }
     
+      
      /**
      * 
-     * @param category
+     * @param permission
      * @throws DataAccessLayerException 
      */
-      public void create(Category category) throws DataAccessLayerException {
-        super.saveOrUpdate(category);
+      public void create(Permission permission) throws DataAccessLayerException {
+        super.saveOrUpdate(permission);
     }
       /**
        * 
-       * @param category
+       * @param permission
        * @throws DataAccessLayerException 
        */
-     public void delete(Category category) throws DataAccessLayerException {
-        super.delete(category);
+     public void delete(Permission permission) throws DataAccessLayerException {
+        super.delete(permission);
     }
       /**
        * 
@@ -42,16 +43,16 @@ public class CategoryDao extends AbstractDao{
        */
         public List find(int Id) throws DataAccessLayerException {
            
-        return  super.find(Category.class, Id ,"category_id");
+        return  super.find(Permission.class, Id ,"permission_id");
         
     }
         /**
          * 
-         * @param category
+         * @param permission
          * @throws DataAccessLayerException 
          */
-         public void update(Category category) throws DataAccessLayerException {
-        super.saveOrUpdate(category);
+         public void update(Permission permission) throws DataAccessLayerException {
+        super.saveOrUpdate(permission);
     }
          /**
           * 
@@ -59,10 +60,9 @@ public class CategoryDao extends AbstractDao{
           * @throws DataAccessLayerException 
           */
            public List findAll() throws DataAccessLayerException {
-        return super.findAll(Category.class);
+        return super.findAll(Permission.class);
     } 
            
            
-    
     
 }

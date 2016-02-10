@@ -7,32 +7,34 @@ package services;
 
 import exceptionshandler.DataAccessLayerException;
 import java.util.List;
-import model.Category;
+import model.User;
 
 /**
  *
  * @author Mado
  */
-public class CategoryDao extends AbstractDao{
-    public CategoryDao(){
+public class UserDao extends AbstractDao {
+    
+    public UserDao(){
         super();
     }
     
-     /**
+    
+    /**
      * 
-     * @param category
+     * @param user
      * @throws DataAccessLayerException 
      */
-      public void create(Category category) throws DataAccessLayerException {
-        super.saveOrUpdate(category);
+      public void create(User user) throws DataAccessLayerException {
+        super.saveOrUpdate(user);
     }
       /**
        * 
-       * @param category
+       * @param user
        * @throws DataAccessLayerException 
        */
-     public void delete(Category category) throws DataAccessLayerException {
-        super.delete(category);
+     public void delete(User user) throws DataAccessLayerException {
+        super.delete(user);
     }
       /**
        * 
@@ -42,16 +44,16 @@ public class CategoryDao extends AbstractDao{
        */
         public List find(int Id) throws DataAccessLayerException {
            
-        return  super.find(Category.class, Id ,"category_id");
+        return  super.find(User.class, Id ,"user_id");
         
     }
         /**
          * 
-         * @param category
+         * @param user
          * @throws DataAccessLayerException 
          */
-         public void update(Category category) throws DataAccessLayerException {
-        super.saveOrUpdate(category);
+         public void update(User user) throws DataAccessLayerException {
+        super.saveOrUpdate(user);
     }
          /**
           * 
@@ -59,10 +61,10 @@ public class CategoryDao extends AbstractDao{
           * @throws DataAccessLayerException 
           */
            public List findAll() throws DataAccessLayerException {
-        return super.findAll(Category.class);
+        return super.findAll(User.class);
     } 
            
-           
+          
     
     
 }
