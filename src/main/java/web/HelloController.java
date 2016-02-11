@@ -47,6 +47,13 @@ public class HelloController {
  }
  
  
+  @RequestMapping("/registration")
+ public String Regestration() {
+    
+     
+     return "registration";
+ }
+ 
  
    
    

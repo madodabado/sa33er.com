@@ -62,7 +62,7 @@ Author: Mado
                     <div class="box1">
                         <select tabindex="4" class="dropdown">
                             <option value="" class="label" value="">Currency :</option>
-                            <option value="1">$ JOD</option>
+                            <option value="1">JOD</option>
                            
                         </select>
                     </div>
@@ -71,7 +71,7 @@ Author: Mado
                 <div class="cssmenu">
                     <ul>
                         <li class="active"><a href="login.html">Account</a></li> |
-                        <li><a href="checkout.html">Wishlist</a></li> |
+                       
                        
                         <li><a href="login.html">Log In</a></li> |
                         <li><a href="register.html">Sign Up</a></li>
@@ -180,25 +180,7 @@ Author: Mado
                         <input type="submit" value="Subscribe" id="submit" name="submit">
                         <div id="response"> </div>
                     </div>
-                    <div class="tag-list">
-                        <ul class="icon1 sub-icon1 profile_img">
-                            <li><a class="active-icon c1" href="#"> </a>
-                                <ul class="sub-icon1 list">
-                                    <li><h3>sed diam nonummy</h3><a href=""></a></li>
-                                    <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="icon1 sub-icon1 profile_img">
-                            <li><a class="active-icon c2" href="#"> </a>
-                                <ul class="sub-icon1 list">
-                                    <li><h3>No Products</h3><a href=""></a></li>
-                                    <li><p>Lorem ipsum dolor sit amet, consectetuer  <a href="">adipiscing elit, sed diam</a></p></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="last"><li><a href="#">Cart(0)</a></li></ul>
-                    </div>
+                   
                 </div>
                 <div class="clear"></div>
             </div>
@@ -209,7 +191,7 @@ Author: Mado
                     <h4 class="title">New Account</h4>
                    
                     <div class="button1">
-                        <a href="register.html"><input type="submit" name="Submit" value="Create an Account"></a>
+                        <a href="./registration"><input type="submit" name="Submit" value="Create an Account"></a>
                     </div>
                     <div class="clear"></div>
                 </div>
