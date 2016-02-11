@@ -8,7 +8,7 @@
 <!DOCTYPE HTML>
 <html>
  <head>
-<title>Sa33er.com | Login</title>
+<title>Sa33er.com | Registration</title>
 <link rel="apple-touch-icon" sizes="57x57" href="<c:url  value="/resources/images/apple-icon-57x57.png" />">
 <link rel="apple-touch-icon" sizes="60x60" href="<c:url    value="/resources/images/apple-icon-60x60.png"/>">
 <link rel="apple-touch-icon" sizes="72x72" href="<c:url    value="/resources/images/apple-icon-72x72.png"/>">
@@ -72,11 +72,11 @@
    			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li class="active"><a href="login.html">Account</a></li> |
 					
 					
-					<li><a href="login.html">Log In</a></li> |
-					<li><a href="register.html">Sign Up</a></li>
+					
+					<li><a href="./login">Log In</a></li> |
+					<li><a href="./registration">Sign Up</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>

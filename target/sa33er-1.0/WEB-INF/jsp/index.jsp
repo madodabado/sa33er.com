@@ -72,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    				    <div class="box1">
    				        <select tabindex="4" class="dropdown">
 							<option value="" class="label" value="">Currency :</option>
-							<option value="1">$ JOD</option>
+							<option value="1">JOD</option>
 							
 						</select>
    				    </div>
@@ -80,11 +80,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    			 </div>
 			 <div class="cssmenu">
 				<ul>
-					<li class="active"><a href="./login">Account</a></li> |
-					<li><a href="checkout.html">Wishlist</a></li> |
 					
-					<li><a href="login.html">Log In</a></li> |
-					<li><a href="register.html">Sign Up</a></li>
+					
+					
+					<li><a href="./login">Log In</a></li> |
+					<li><a href="./registration">Sign Up</a></li>
 				</ul>
 			</div>
 			<div class="clear"></div>
