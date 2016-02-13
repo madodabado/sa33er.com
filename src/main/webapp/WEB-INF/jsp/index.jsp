@@ -99,7 +99,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="menu">
 	            <ul class="megamenu skyblue">
 			<li class="active grid"><a href="/">Home</a></li>
-			<li><a class="color4" href="#">women</a>
+			<li><a class="color4" href="#">Categories</a>
 				<div class="megapanel">
 					<div class="row">
 						<div class="col1">
@@ -199,9 +199,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<ul class="rslides" id="slider4">
 					    <li>
 						  <div class="banner-img">
-                                                      <img src="<c:url    value="/resources/images/banner.jpg" />" class="img-responsive" alt="" />
+                                                      <img src="<c:url  value="http://res.cloudinary.com/mughrabi/image/upload/v1455374176/panel_bsrvlz.jpg" />" class="img-responsive"  alt="" />
 						  </div>
-						    <h4>Sa333er.com</h4>
+						    <h4 >Sa333er.com</h4>
 						     <h5>Priceless</h5>
 						</li>
 					
@@ -244,12 +244,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			   <a href="single.html">
 				<div class="inner_content clearfix">
 					<div class="product_image">
-                                            <img src="<c:url   value="/resources/images/pic.jpg"/>" alt=""/>
+                                            <img src="<c:url   value="http://res.cloudinary.com/mughrabi/image/upload/v1455374958/Iphone_g2ywul.jpg"/>" alt=""/>
 					</div>
                   
                     <div class="price">
 					   <div class="cart-left">
-							<p class="title">Lorem Ipsum simply</p>
+							<p class="title">Iphone 6s</p>
 							<div class="price1">
 							  <span class="actual">$12.00</span>
 							</div>
