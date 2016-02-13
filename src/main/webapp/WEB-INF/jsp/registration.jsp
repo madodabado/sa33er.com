@@ -35,6 +35,7 @@
  <link rel='stylesheet' href='<c:url value="//fonts.googleapis.com/css?family=Exo+2"/>' type='text/css' media='all' />
  <script src='<c:url value="/resources/js/jquery1.min.js"/>'></script>
 
+ 
 <!-- start menu -->
 <link href="<c:url value="/resources/css/megamenu.css" />" rel="stylesheet">
 <script src='<c:url value="/resources/js/megamenu.js"/>'></script>
@@ -47,6 +48,8 @@
    
 <!--end slider -->
 <script src='<c:url value="/resources/js/jquery.easydropdown.js"/>'></script>
+<script src='<c:url value="/resources/js/calander.js"/>'></script>
+
 
 </head>
 <body> 
@@ -188,18 +191,134 @@
           <div class="register_account">
           	<div class="wrap">
     	      <h4 class="title">Create an Account</h4>
-    		   <form>
+    		   <form id="registrationfrm">
     			 <div class="col_1_of_2 span_1_of_2">
-		   			 <div><input type="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}"></div>
-		    			<div><input type="text" value="Company Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Company Name';}"></div>
-		    			<div><input type="text" value="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-Mail';}"></div>
-		    			<div><input type="text" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></div>
+		   			 <div><input type="text" id="fname" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></div>
+		    			 
+                                          <div><input type="text" id="Lname" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
+                                          <p class="code">Birth Of Date</p>
+                                          <select style="width: 100px" type="text" id="year" value="Year" onchange="change_year(this.value)" class="frm-field required code"> 
+                                          <option value="null">Year</option> 
+                                           
+                             <option value="1950">1950</option>
+		            <option value="1951">1951</option>
+		            <option value="1952">1952</option>
+                             <option value="1953">1953</option>
+		            <option value="1954">1954</option>
+                             <option value="1955">1955</option>
+		            <option value="1956">1956</option>
+		            <option value="1957">1957</option>
+                             <option value="1958">1958</option>
+		            <option value="1959">1959</option>
+                             <option value="1960">1960</option>
+		            <option value="1961">1961</option>
+		            <option value="1962">1962</option>
+                                  <option value="1963">1963</option>
+                                  <option value="1964">19654</option>
+                                  <option value="1965">1965</option>
+                                  <option value="1966">1966</option>
+                                  <option value="1967">1967</option>
+                                  <option value="1968">1968</option>
+                                  <option value="1969">1969</option>
+                                  <option value="1970">1970</option>
+                                  <option value="1971">1971</option>
+                                  <option value="1972">1972</option>
+                                  <option value="1973">1973</option>
+                                  <option value="1974">1974</option>
+                                  <option value="1975">1975</option>
+                                  <option value="1976">1976</option>
+                                  <option value="1977">1977</option>
+                                  <option value="1978">1978</option>
+                                  <option value="1979">1979</option>
+                                  
+                             <option value="1980">1980</option>
+		            <option value="1981">1981</option>
+		            <option value="1982">1982</option>
+                             <option value="1980">1983</option>
+		            <option value="1981">1984</option>
+		            <option value="1982">1985</option>
+                             <option value="1980">1986</option>
+		            <option value="1981">1987</option>
+		            <option value="1982">1988</option>
+                             <option value="1980">1989</option>
+		            <option value="1981">1990</option>
+		            <option value="1982">1991</option>
+                             <option value="1980">1992</option>
+		            <option value="1981">1993</option>
+		            <option value="1982">1994</option>
+                             <option value="1981">1995</option>
+		            <option value="1982">1996</option>
+                             <option value="1980">1997</option>
+		            <option value="1981">1998</option>
+		            <option value="1982">1999</option>
+                             <option value="1981">2000</option>
+		       
+                                          </select>
+                                          
+                                          
+                                          / <select select style="width: 100px" type="text" id="month" value="Year" onchange="change_year(this.value)" class="frm-field required code">
+                                          <option value="null">Month</option> 
+                                           
+                             <option value="JAN">January</option>
+		            <option value="FEB">February</option>
+		            <option value="MAR">March</option>
+                             <option value="APR">April</option>
+		            <option value="MAY">May</option>
+                             <option value="JUNE">June</option>
+		            <option value="JULY">July</option>
+		            <option value="AUGUST">August</option>
+                             <option value="SEPTEMBER">September</option>
+		            <option value="OCTOBER">October</option>
+                             <option value="November">November</option>
+		            <option value="December">October</option>
+                                          
+                                          </select>
+                                              / <select select style="width: 100px" type="text" id="day" value="Day" onchange="change_day(this.value)" class="frm-field required code">
+                                          <option value="null">Day</option> 
+                                           
+                             <option value="1">1</option>
+		            <option value="2">2</option>
+		            <option value="3">3</option>
+                             <option value="4">4</option>
+		            <option value="5">5</option>
+                             <option value="6">6</option>
+		            <option value="7">7</option>
+		            <option value="8">8</option>
+                             <option value="9">9</option>
+		            <option value="10">10</option>
+                             <option value="11">11</option>
+		            <option value="12">12</option>
+		            <option value="13">13</option>
+                                  <option value="14">14</option>
+                                    <option value="15">15</option>
+		            <option value="16">16</option>
+		            <option value="17">17</option>
+                             <option value="18">18</option>
+		            <option value="19">19</option>
+                             <option value="20">20</option>
+		            <option value="21">21</option>
+		            <option value="22">22</option>
+                             <option value="23">23</option>
+		            <option value="24">24</option>
+                             <option value="25">25</option>
+		            <option value="26">26</option>
+		            <option value="27">27</option>
+                                  <option value="28">28</option>
+                                   <option value="29">29</option>
+                                  <option value="30">30</option>
+                                    <option value="31">31</option>
+                                          
+                                          
+                                          </select>
+		    			<div><input type="text" id="email" value="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-Mail';}"></div>
+		    			<div><input type="text" id="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></div>
 		    	 </div>
 		    	  <div class="col_1_of_2 span_1_of_2">	
-		    		<div><input type="text" value="Address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address';}"></div>
+		    		<div><input type="text" id="address1" value="Address 1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address 1';}"></div>
+                                <div><input type="text" id="address2" value="Address 2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address 2';}"></div>
 		    		<div><select id="country" name="country" onchange="change_country(this.value)" class="frm-field required">
 		            <option value="null">Select a Country</option>         
-		            <option value="AX">Åland Islands</option>
+		         
 		            <option value="AF">Afghanistan</option>
 		            <option value="AL">Albania</option>
 		            <option value="DZ">Algeria</option>
@@ -394,13 +513,13 @@
 		            <option value="SA">Saudi Arabia</option>
 		            <option value="SN">Senegal</option>
 		         </select></div>		        
-		          <div><input type="text" value="City" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'City';}"></div>
+		          <div><input type="text" id="city" value="City" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'City';}"></div>
 		           <div>
 		          </div>
-		          	<input type="text" value="" class="code"> - <input type="text" value="" class="number">
+		          	<input type="text" value="+xxx" class="code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '+xxx';}"> - <input type="text" value="xx-xxxxxxx" class="number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xx-xxxxxxx';}">
 		          		<p class="code">Country Code + Phone Number</p>
 		          </div>
-		      <button class="grey">Submit</button>
+                       <button class="grey" style="margin-left: 50%">Submit</button>
 		    <p class="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.</p>
 		    <div class="clear"></div>
 		    </form>
