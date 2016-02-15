@@ -191,13 +191,13 @@
           <div class="register_account">
           	<div class="wrap">
     	      <h4 class="title">Create an Account</h4>
-    		   <form id="registrationfrm">
+    		   <form id="registrationfrm" method="POST" action="./Add-User">
     			 <div class="col_1_of_2 span_1_of_2">
-		   			 <div><input type="text" id="fname" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></div>
+		   			 <div><input type="text" name="fname" id="fname" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}"></div>
 		    			 
-                                          <div><input type="text" id="Lname" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
+                                          <div><input type="text" name="lname" id="lname" value="Last Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Last Name';}"></div>
                                           <p class="code">Birth Of Date</p>
-                                          <select style="width: 100px" type="text" id="year" value="Year" onchange="change_year(this.value)" class="frm-field required code"> 
+                                          <select style="width: 100px" type="text" name="year" id="year" value="Year" onchange="change_year(this.value)" class="frm-field required code"> 
                                           <option value="null">Year</option> 
                                            
                              <option value="1950">1950</option>
@@ -256,7 +256,7 @@
                                           </select>
                                           
                                           
-                                          / <select select style="width: 100px" type="text" id="month" value="Year" onchange="change_year(this.value)" class="frm-field required code">
+                                          / <select select style="width: 100px" type="text" name="month" id="month" value="Year" onchange="change_year(this.value)" class="frm-field required code">
                                           <option value="null">Month</option> 
                                            
                              <option value="JAN">January</option>
@@ -273,7 +273,7 @@
 		            <option value="December">October</option>
                                           
                                           </select>
-                                              / <select select style="width: 100px" type="text" id="day" value="Day" onchange="change_day(this.value)" class="frm-field required code">
+                                              / <select select style="width: 100px" type="text" name="day" id="day" value="Day" onchange="change_day(this.value)" class="frm-field required code">
                                           <option value="null">Day</option> 
                                            
                              <option value="1">1</option>
@@ -310,12 +310,12 @@
                                           
                                           
                                           </select>
-		    			<div><input type="text" id="email" value="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-Mail';}"></div>
-		    			<div><input type="text" id="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></div>
+		    			<div><input type="text" name="email" id="email" value="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-Mail';}"></div>
+		    			<div><input type="text" name="password" id="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></div>
 		    	 </div>
 		    	  <div class="col_1_of_2 span_1_of_2">	
-		    		<div><input type="text" id="address1" value="Address 1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address 1';}"></div>
-                                <div><input type="text" id="address2" value="Address 2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address 2';}"></div>
+		    		<div><input type="text" name="address1" id="address1" value="Address 1" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address 1';}"></div>
+                                <div><input type="text" name="address2" id="address2" value="Address 2" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Address 2';}"></div>
 		    		<div><select id="country" name="country" onchange="change_country(this.value)" class="frm-field required">
 		            <option value="null">Select a Country</option>         
 		         
@@ -513,10 +513,10 @@
 		            <option value="SA">Saudi Arabia</option>
 		            <option value="SN">Senegal</option>
 		         </select></div>		        
-		          <div><input type="text" id="city" value="City" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'City';}"></div>
+		          <div><input type="text" name="city" id="city" value="City" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'City';}"></div>
 		           <div>
 		          </div>
-		          	<input type="text" value="+xxx" class="code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '+xxx';}"> - <input type="text" value="xx-xxxxxxx" class="number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xx-xxxxxxx';}">
+		          	<input type="text" name="countryCode" id="countryCode" value="+xxx" class="code" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '+xxx';}"> - <input type="text" name="phoneNumber" id="phoneNumber" value="xx-xxxxxxx" class="number" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'xx-xxxxxxx';}">
 		          		<p class="code">Country Code + Phone Number</p>
 		          </div>
                        <button class="grey" style="margin-left: 50%">Submit</button>
