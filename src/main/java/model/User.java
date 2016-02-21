@@ -1,5 +1,5 @@
 package model;
-// Generated Feb 10, 2016 1:49:24 PM by Hibernate Tools 4.3.1
+// Generated Feb 21, 2016 4:25:01 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,51 +13,60 @@ public class User  implements java.io.Serializable {
 
 
      private Integer userId;
-     private String fname;
-     private String sname;
+     private String firstName;
+     private String lastName;
      private String email;
      private String password;
      private Date birthOfDate;
      private String gender;
      private String country;
      private String city;
-     private String address1;
-     private String address2;
+     private String address01;
+     private String address02;
      private String phoneNumber;
      private Integer createdBy;
      private Date createdTimestamp;
      private Integer updatedBy;
      private Date updatedTimestamp;
-     private Set permissions = new HashSet(0);
+     private Set userPermissions = new HashSet(0);
+     private Set reviews = new HashSet(0);
+     private Set comments = new HashSet(0);
 
     public User() {
     }
 
 	
-    public User(String fname, String sname, String email, String password, Date birthOfDate) {
-        this.fname = fname;
-        this.sname = sname;
+    public User(String firstName, String lastName, String email, String password, Date birthOfDate, String gender, String country, String city, String address01, String phoneNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.birthOfDate = birthOfDate;
+        this.gender = gender;
+        this.country = country;
+        this.city = city;
+        this.address01 = address01;
+        this.phoneNumber = phoneNumber;
     }
-    public User(String fname, String sname, String email, String password, Date birthOfDate, String gender, String country, String city, String address1, String address2, String phoneNumber, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set permissions) {
-       this.fname = fname;
-       this.sname = sname;
+    public User(String firstName, String lastName, String email, String password, Date birthOfDate, String gender, String country, String city, String address01, String address02, String phoneNumber, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set userPermissions, Set reviews, Set comments) {
+       this.firstName = firstName;
+       this.lastName = lastName;
        this.email = email;
        this.password = password;
        this.birthOfDate = birthOfDate;
        this.gender = gender;
        this.country = country;
        this.city = city;
-       this.address1 = address1;
-       this.address2 = address2;
+       this.address01 = address01;
+       this.address02 = address02;
        this.phoneNumber = phoneNumber;
        this.createdBy = createdBy;
        this.createdTimestamp = createdTimestamp;
        this.updatedBy = updatedBy;
        this.updatedTimestamp = updatedTimestamp;
-       this.permissions = permissions;
+       this.userPermissions = userPermissions;
+       this.reviews = reviews;
+       this.comments = comments;
     }
    
     public Integer getUserId() {
@@ -67,19 +76,19 @@ public class User  implements java.io.Serializable {
     public void setUserId(Integer userId) {
         this.userId = userId;
     }
-    public String getFname() {
-        return this.fname;
+    public String getFirstName() {
+        return this.firstName;
     }
     
-    public void setFname(String fname) {
-        this.fname = fname;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
-    public String getSname() {
-        return this.sname;
+    public String getLastName() {
+        return this.lastName;
     }
     
-    public void setSname(String sname) {
-        this.sname = sname;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
     public String getEmail() {
         return this.email;
@@ -123,19 +132,19 @@ public class User  implements java.io.Serializable {
     public void setCity(String city) {
         this.city = city;
     }
-    public String getAddress1() {
-        return this.address1;
+    public String getAddress01() {
+        return this.address01;
     }
     
-    public void setAddress1(String address1) {
-        this.address1 = address1;
+    public void setAddress01(String address01) {
+        this.address01 = address01;
     }
-    public String getAddress2() {
-        return this.address2;
+    public String getAddress02() {
+        return this.address02;
     }
     
-    public void setAddress2(String address2) {
-        this.address2 = address2;
+    public void setAddress02(String address02) {
+        this.address02 = address02;
     }
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -172,12 +181,26 @@ public class User  implements java.io.Serializable {
     public void setUpdatedTimestamp(Date updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
     }
-    public Set getPermissions() {
-        return this.permissions;
+    public Set getUserPermissions() {
+        return this.userPermissions;
     }
     
-    public void setPermissions(Set permissions) {
-        this.permissions = permissions;
+    public void setUserPermissions(Set userPermissions) {
+        this.userPermissions = userPermissions;
+    }
+    public Set getReviews() {
+        return this.reviews;
+    }
+    
+    public void setReviews(Set reviews) {
+        this.reviews = reviews;
+    }
+    public Set getComments() {
+        return this.comments;
+    }
+    
+    public void setComments(Set comments) {
+        this.comments = comments;
     }
 
 

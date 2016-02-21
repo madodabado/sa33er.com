@@ -4,16 +4,18 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://104.131.168.21:3306/sa33erDB?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://104.131.168.21:3306/Sa33er?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">madodabado</property>
-    <mapping resource="model/Product.hbm.xml"/>
-    <mapping resource="model/SubCategory.hbm.xml"/>
-    <mapping resource="model/Permission.hbm.xml"/>
+    <mapping resource="model/Review.hbm.xml"/>
+    <mapping resource="model/Store.hbm.xml"/>
     <mapping resource="model/Category.hbm.xml"/>
     <mapping resource="model/StoreProduct.hbm.xml"/>
-    <mapping resource="model/Store.hbm.xml"/>
-    <mapping resource="model/Authority.hbm.xml"/>
+    <mapping resource="model/Comment.hbm.xml"/>
+    <mapping resource="model/UserPermission.hbm.xml"/>
+    <mapping resource="model/SubCategory.hbm.xml"/>
+    <mapping resource="model/Product.hbm.xml"/>
     <mapping resource="model/User.hbm.xml"/>
+    <mapping resource="model/Permission.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,35 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Feb 10, 2016 1:49:25 PM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 21, 2016 4:25:02 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="sa33erDB" name="model.StoreProduct" optimistic-lock="version" table="store_product">
-    <id name="storeProductId" type="java.lang.Integer">
-      <column name="store_product_id"/>
-      <generator class="identity"/>
-    </id>
-    <many-to-one class="model.Store" fetch="select" name="store">
-      <column name="store_id" not-null="true"/>
-    </many-to-one>
-    <many-to-one class="model.SubCategory" fetch="select" name="subCategory">
-      <column name="subcategory_id" not-null="true"/>
-    </many-to-one>
-    <property name="storeName" type="string">
-      <column length="45" name="store_name" not-null="true"/>
-    </property>
-    <property name="subcategoryName" type="string">
-      <column length="45" name="subcategory_name" not-null="true"/>
-    </property>
-    <property name="createdBy" type="java.lang.Integer">
-      <column name="created_by"/>
-    </property>
-    <property name="createdTimestamp" type="timestamp">
-      <column length="19" name="created_timestamp"/>
-    </property>
-    <property name="updatedBy" type="java.lang.Integer">
-      <column name="updated_by"/>
-    </property>
-    <property name="updatedTimestamp" type="timestamp">
-      <column length="19" name="updated_timestamp"/>
-    </property>
-  </class>
+    <class name="model.StoreProduct" table="store_product" catalog="Sa33er" optimistic-lock="version">
+        <id name="storeProductId" type="java.lang.Integer">
+            <column name="store_product_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="product" class="model.Product" fetch="select">
+            <column name="product_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="store" class="model.Store" fetch="select">
+            <column name="store_id" not-null="true" />
+        </many-to-one>
+        <property name="storeName" type="string">
+            <column name="store_name" length="100" not-null="true" />
+        </property>
+        <property name="productName" type="string">
+            <column name="product_name" length="100" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" />
+        </property>
+        <property name="createdTimestamp" type="timestamp">
+            <column name="created_timestamp" length="19" />
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by" />
+        </property>
+        <property name="updatedTimestamp" type="timestamp">
+            <column name="updated_timestamp" length="19" />
+        </property>
+    </class>
 </hibernate-mapping>

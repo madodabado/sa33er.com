@@ -3,16 +3,22 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <!-- Generated Feb 21, 2016 4:25:02 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="model.Permission" table="permission" catalog="Sa33er" optimistic-lock="version">
-        <id name="permissionId" type="java.lang.Integer">
-            <column name="permission_id" />
+    <class name="model.UserPermission" table="user_permission" catalog="Sa33er" optimistic-lock="version">
+        <id name="userPermissionId" type="java.lang.Integer">
+            <column name="user_permission_id" />
             <generator class="identity" />
         </id>
+        <many-to-one name="permission" class="model.Permission" fetch="select">
+            <column name="permission_id" not-null="true" />
+        </many-to-one>
+        <many-to-one name="user" class="model.User" fetch="select">
+            <column name="user_id" not-null="true" />
+        </many-to-one>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
         <property name="permissionName" type="string">
             <column name="permission_name" length="100" not-null="true" />
-        </property>
-        <property name="permissionDescription" type="string">
-            <column name="permission_description" length="200" not-null="true" />
         </property>
         <property name="createdBy" type="java.lang.Integer">
             <column name="created_by" />
@@ -26,11 +32,5 @@
         <property name="updatedTimestamp" type="timestamp">
             <column name="updated_timestamp" length="19" />
         </property>
-        <set name="userPermissions" table="user_permission" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="permission_id" not-null="true" />
-            </key>
-            <one-to-many class="model.UserPermission" />
-        </set>
     </class>
 </hibernate-mapping>

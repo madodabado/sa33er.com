@@ -1,83 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Feb 10, 2016 1:49:25 PM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 21, 2016 4:25:02 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="sa33erDB" name="model.Store" optimistic-lock="version" table="store">
-    <id name="storeId" type="java.lang.Integer">
-      <column name="store_id"/>
-      <generator class="identity"/>
-    </id>
-    <property name="storeName" type="string">
-      <column length="45" name="store_name" not-null="true"/>
-    </property>
-    <property name="phoneNumber" type="string">
-      <column length="45" name="phone_number" not-null="true"/>
-    </property>
-    <property name="description" type="string">
-      <column length="45" name="description" not-null="true"/>
-    </property>
-    <property name="reference01" type="string">
-      <column length="45" name="reference01"/>
-    </property>
-    <property name="reference02" type="string">
-      <column length="45" name="reference02"/>
-    </property>
-    <property name="reference03" type="string">
-      <column length="45" name="reference03"/>
-    </property>
-    <property name="reference04" type="string">
-      <column length="45" name="reference04"/>
-    </property>
-    <property name="reference05" type="string">
-      <column length="45" name="reference05"/>
-    </property>
-    <property name="reference06" type="string">
-      <column length="45" name="reference06"/>
-    </property>
-    <property name="reference07" type="string">
-      <column length="45" name="reference07"/>
-    </property>
-    <property name="reference08" type="string">
-      <column length="45" name="reference08"/>
-    </property>
-    <property name="reference09" type="string">
-      <column length="45" name="reference09"/>
-    </property>
-    <property name="reference19" type="string">
-      <column length="45" name="reference19"/>
-    </property>
-    <property name="country" type="string">
-      <column length="45" name="country"/>
-    </property>
-    <property name="city" type="string">
-      <column length="45" name="city"/>
-    </property>
-    <property name="address01" type="string">
-      <column length="45" name="address01"/>
-    </property>
-    <property name="address02" type="string">
-      <column length="45" name="address02"/>
-    </property>
-    <property name="email" type="string">
-      <column length="45" name="email"/>
-    </property>
-    <property name="createdBy" type="java.lang.Integer">
-      <column name="created_by"/>
-    </property>
-    <property name="createdTimestamp" type="timestamp">
-      <column length="19" name="created_timestamp"/>
-    </property>
-    <property name="updatedBy" type="java.lang.Integer">
-      <column name="updated_by"/>
-    </property>
-    <property name="updatedTimestamp" type="timestamp">
-      <column length="19" name="updated_timestamp"/>
-    </property>
-    <set fetch="select" inverse="true" lazy="true" name="storeProducts" table="store_product">
-      <key>
-        <column name="store_id" not-null="true"/>
-      </key>
-      <one-to-many class="model.StoreProduct"/>
-    </set>
-  </class>
+    <class name="model.Store" table="store" catalog="Sa33er" optimistic-lock="version">
+        <id name="storeId" type="java.lang.Integer">
+            <column name="store_id" />
+            <generator class="identity" />
+        </id>
+        <property name="storeName" type="string">
+            <column name="store_name" length="100" not-null="true" />
+        </property>
+        <property name="storeDescription" type="string">
+            <column name="store_description" length="200" not-null="true" />
+        </property>
+        <property name="location" type="string">
+            <column name="location" length="45" />
+        </property>
+        <property name="latitude" type="string">
+            <column name="latitude" length="100" not-null="true" />
+        </property>
+        <property name="longtitude" type="string">
+            <column name="longtitude" length="100" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="45" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phone_number" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" />
+        </property>
+        <property name="createdTimestamp" type="timestamp">
+            <column name="created_timestamp" length="19" />
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by" />
+        </property>
+        <property name="updatedTimestamp" type="timestamp">
+            <column name="updated_timestamp" length="19" />
+        </property>
+        <set name="storeProducts" table="store_product" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="store_id" not-null="true" />
+            </key>
+            <one-to-many class="model.StoreProduct" />
+        </set>
+    </class>
 </hibernate-mapping>

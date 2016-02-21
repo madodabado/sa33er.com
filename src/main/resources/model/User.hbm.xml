@@ -1,62 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Feb 10, 2016 1:49:25 PM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 21, 2016 4:25:02 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-  <class catalog="sa33erDB" name="model.User" optimistic-lock="version" table="user">
-    <id name="userId" type="java.lang.Integer">
-      <column name="user_id"/>
-      <generator class="identity"/>
-    </id>
-    <property name="fname" type="string">
-      <column length="45" name="fname" not-null="true"/>
-    </property>
-    <property name="sname" type="string">
-      <column length="45" name="sname" not-null="true"/>
-    </property>
-    <property name="email" type="string">
-      <column length="45" name="email" not-null="true"/>
-    </property>
-    <property name="password" type="string">
-      <column length="45" name="password" not-null="true"/>
-    </property>
-    <property name="birthOfDate" type="timestamp">
-      <column length="19" name="birth_of_date" not-null="true"/>
-    </property>
-    <property name="gender" type="string">
-      <column length="45" name="gender"/>
-    </property>
-    <property name="country" type="string">
-      <column length="45" name="country"/>
-    </property>
-    <property name="city" type="string">
-      <column length="45" name="city"/>
-    </property>
-    <property name="address1" type="string">
-      <column length="45" name="address1"/>
-    </property>
-    <property name="address2" type="string">
-      <column length="45" name="address2"/>
-    </property>
-    <property name="phoneNumber" type="string">
-      <column length="45" name="phone_number"/>
-    </property>
-    <property name="createdBy" type="java.lang.Integer">
-      <column name="created_by"/>
-    </property>
-    <property name="createdTimestamp" type="timestamp">
-      <column length="19" name="created_timestamp"/>
-    </property>
-    <property name="updatedBy" type="java.lang.Integer">
-      <column name="updated_by"/>
-    </property>
-    <property name="updatedTimestamp" type="timestamp">
-      <column length="19" name="updated_timestamp"/>
-    </property>
-    <set fetch="select" inverse="true" lazy="true" name="permissions" table="permission">
-      <key>
-        <column name="user_id" not-null="true"/>
-      </key>
-      <one-to-many class="model.Permission"/>
-    </set>
-  </class>
+    <class name="model.User" table="user" catalog="Sa33er" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="firstName" type="string">
+            <column name="first_name" length="100" not-null="true" />
+        </property>
+        <property name="lastName" type="string">
+            <column name="last_name" length="100" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="100" not-null="true" />
+        </property>
+        <property name="birthOfDate" type="timestamp">
+            <column name="birth_of_date" length="19" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="10" not-null="true" />
+        </property>
+        <property name="country" type="string">
+            <column name="country" length="45" not-null="true" />
+        </property>
+        <property name="city" type="string">
+            <column name="city" length="45" not-null="true" />
+        </property>
+        <property name="address01" type="string">
+            <column name="address_01" length="100" not-null="true" />
+        </property>
+        <property name="address02" type="string">
+            <column name="address_02" length="100" />
+        </property>
+        <property name="phoneNumber" type="string">
+            <column name="phone_number" length="45" not-null="true" />
+        </property>
+        <property name="createdBy" type="java.lang.Integer">
+            <column name="created_by" />
+        </property>
+        <property name="createdTimestamp" type="timestamp">
+            <column name="created_timestamp" length="19" />
+        </property>
+        <property name="updatedBy" type="java.lang.Integer">
+            <column name="updated_by" />
+        </property>
+        <property name="updatedTimestamp" type="timestamp">
+            <column name="updated_timestamp" length="19" />
+        </property>
+        <set name="userPermissions" table="user_permission" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="model.UserPermission" />
+        </set>
+        <set name="reviews" table="review" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="model.Review" />
+        </set>
+        <set name="comments" table="comment" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" not-null="true" />
+            </key>
+            <one-to-many class="model.Comment" />
+        </set>
+    </class>
 </hibernate-mapping>

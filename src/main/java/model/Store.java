@@ -1,5 +1,5 @@
 package model;
-// Generated Feb 10, 2016 1:49:24 PM by Hibernate Tools 4.3.1
+// Generated Feb 21, 2016 4:25:01 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -14,22 +14,13 @@ public class Store  implements java.io.Serializable {
 
      private Integer storeId;
      private String storeName;
-     private String phoneNumber;
-     private String description;
-     private String reference01;
-     private String reference02;
-     private String reference03;
-     private String reference04;
-     private String reference05;
-     private String reference06;
-     private String reference07;
-     private String reference08;
-     private String reference09;
-     private String reference19;
+     private String storeDescription;
+     private String location;
+     private String latitude;
+     private String longtitude;
      private String country;
      private String city;
-     private String address01;
-     private String address02;
+     private String phoneNumber;
      private String email;
      private Integer createdBy;
      private Date createdTimestamp;
@@ -41,29 +32,20 @@ public class Store  implements java.io.Serializable {
     }
 
 	
-    public Store(String storeName, String phoneNumber, String description) {
+    public Store(String storeName, String storeDescription, String latitude) {
         this.storeName = storeName;
-        this.phoneNumber = phoneNumber;
-        this.description = description;
+        this.storeDescription = storeDescription;
+        this.latitude = latitude;
     }
-    public Store(String storeName, String phoneNumber, String description, String reference01, String reference02, String reference03, String reference04, String reference05, String reference06, String reference07, String reference08, String reference09, String reference19, String country, String city, String address01, String address02, String email, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set storeProducts) {
+    public Store(String storeName, String storeDescription, String location, String latitude, String longtitude, String country, String city, String phoneNumber, String email, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set storeProducts) {
        this.storeName = storeName;
-       this.phoneNumber = phoneNumber;
-       this.description = description;
-       this.reference01 = reference01;
-       this.reference02 = reference02;
-       this.reference03 = reference03;
-       this.reference04 = reference04;
-       this.reference05 = reference05;
-       this.reference06 = reference06;
-       this.reference07 = reference07;
-       this.reference08 = reference08;
-       this.reference09 = reference09;
-       this.reference19 = reference19;
+       this.storeDescription = storeDescription;
+       this.location = location;
+       this.latitude = latitude;
+       this.longtitude = longtitude;
        this.country = country;
        this.city = city;
-       this.address01 = address01;
-       this.address02 = address02;
+       this.phoneNumber = phoneNumber;
        this.email = email;
        this.createdBy = createdBy;
        this.createdTimestamp = createdTimestamp;
@@ -86,89 +68,33 @@ public class Store  implements java.io.Serializable {
     public void setStoreName(String storeName) {
         this.storeName = storeName;
     }
-    public String getPhoneNumber() {
-        return this.phoneNumber;
+    public String getStoreDescription() {
+        return this.storeDescription;
     }
     
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setStoreDescription(String storeDescription) {
+        this.storeDescription = storeDescription;
     }
-    public String getDescription() {
-        return this.description;
-    }
-    
-    public void setDescription(String description) {
-        this.description = description;
-    }
-    public String getReference01() {
-        return this.reference01;
+    public String getLocation() {
+        return this.location;
     }
     
-    public void setReference01(String reference01) {
-        this.reference01 = reference01;
+    public void setLocation(String location) {
+        this.location = location;
     }
-    public String getReference02() {
-        return this.reference02;
-    }
-    
-    public void setReference02(String reference02) {
-        this.reference02 = reference02;
-    }
-    public String getReference03() {
-        return this.reference03;
+    public String getLatitude() {
+        return this.latitude;
     }
     
-    public void setReference03(String reference03) {
-        this.reference03 = reference03;
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
     }
-    public String getReference04() {
-        return this.reference04;
-    }
-    
-    public void setReference04(String reference04) {
-        this.reference04 = reference04;
-    }
-    public String getReference05() {
-        return this.reference05;
+    public String getLongtitude() {
+        return this.longtitude;
     }
     
-    public void setReference05(String reference05) {
-        this.reference05 = reference05;
-    }
-    public String getReference06() {
-        return this.reference06;
-    }
-    
-    public void setReference06(String reference06) {
-        this.reference06 = reference06;
-    }
-    public String getReference07() {
-        return this.reference07;
-    }
-    
-    public void setReference07(String reference07) {
-        this.reference07 = reference07;
-    }
-    public String getReference08() {
-        return this.reference08;
-    }
-    
-    public void setReference08(String reference08) {
-        this.reference08 = reference08;
-    }
-    public String getReference09() {
-        return this.reference09;
-    }
-    
-    public void setReference09(String reference09) {
-        this.reference09 = reference09;
-    }
-    public String getReference19() {
-        return this.reference19;
-    }
-    
-    public void setReference19(String reference19) {
-        this.reference19 = reference19;
+    public void setLongtitude(String longtitude) {
+        this.longtitude = longtitude;
     }
     public String getCountry() {
         return this.country;
@@ -184,19 +110,12 @@ public class Store  implements java.io.Serializable {
     public void setCity(String city) {
         this.city = city;
     }
-    public String getAddress01() {
-        return this.address01;
+    public String getPhoneNumber() {
+        return this.phoneNumber;
     }
     
-    public void setAddress01(String address01) {
-        this.address01 = address01;
-    }
-    public String getAddress02() {
-        return this.address02;
-    }
-    
-    public void setAddress02(String address02) {
-        this.address02 = address02;
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
     }
     public String getEmail() {
         return this.email;

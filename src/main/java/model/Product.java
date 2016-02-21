@@ -1,5 +1,5 @@
 package model;
-// Generated Feb 10, 2016 1:49:24 PM by Hibernate Tools 4.3.1
+// Generated Feb 21, 2016 4:25:01 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,30 +13,61 @@ public class Product  implements java.io.Serializable {
 
 
      private Integer productId;
-     private String name;
-     private String description;
+     private SubCategory subCategory;
+     private String productName;
+     private String productDescription;
+     private String subCategoryName;
+     private String productCode;
+     private String reference01;
+     private String reference02;
+     private String reference03;
+     private String reference04;
+     private String reference05;
+     private String reference06;
+     private String reference07;
+     private String reference08;
+     private String reference09;
+     private String reference10;
      private Integer createdBy;
      private Date createdTimestamp;
      private Integer updatedBy;
      private Date updatedTimestamp;
-     private Set categories = new HashSet(0);
+     private Set comments = new HashSet(0);
+     private Set storeProducts = new HashSet(0);
+     private Set reviews = new HashSet(0);
 
     public Product() {
     }
 
 	
-    public Product(String name, String description) {
-        this.name = name;
-        this.description = description;
+    public Product(SubCategory subCategory, String productName, String subCategoryName) {
+        this.subCategory = subCategory;
+        this.productName = productName;
+        this.subCategoryName = subCategoryName;
     }
-    public Product(String name, String description, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set categories) {
-       this.name = name;
-       this.description = description;
+    public Product(SubCategory subCategory, String productName, String productDescription, String subCategoryName, String productCode, String reference01, String reference02, String reference03, String reference04, String reference05, String reference06, String reference07, String reference08, String reference09, String reference10, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set comments, Set storeProducts, Set reviews) {
+       this.subCategory = subCategory;
+       this.productName = productName;
+       this.productDescription = productDescription;
+       this.subCategoryName = subCategoryName;
+       this.productCode = productCode;
+       this.reference01 = reference01;
+       this.reference02 = reference02;
+       this.reference03 = reference03;
+       this.reference04 = reference04;
+       this.reference05 = reference05;
+       this.reference06 = reference06;
+       this.reference07 = reference07;
+       this.reference08 = reference08;
+       this.reference09 = reference09;
+       this.reference10 = reference10;
        this.createdBy = createdBy;
        this.createdTimestamp = createdTimestamp;
        this.updatedBy = updatedBy;
        this.updatedTimestamp = updatedTimestamp;
-       this.categories = categories;
+       this.comments = comments;
+       this.storeProducts = storeProducts;
+       this.reviews = reviews;
     }
    
     public Integer getProductId() {
@@ -46,19 +77,110 @@ public class Product  implements java.io.Serializable {
     public void setProductId(Integer productId) {
         this.productId = productId;
     }
-    public String getName() {
-        return this.name;
+    public SubCategory getSubCategory() {
+        return this.subCategory;
     }
     
-    public void setName(String name) {
-        this.name = name;
+    public void setSubCategory(SubCategory subCategory) {
+        this.subCategory = subCategory;
     }
-    public String getDescription() {
-        return this.description;
+    public String getProductName() {
+        return this.productName;
     }
     
-    public void setDescription(String description) {
-        this.description = description;
+    public void setProductName(String productName) {
+        this.productName = productName;
+    }
+    public String getProductDescription() {
+        return this.productDescription;
+    }
+    
+    public void setProductDescription(String productDescription) {
+        this.productDescription = productDescription;
+    }
+    public String getSubCategoryName() {
+        return this.subCategoryName;
+    }
+    
+    public void setSubCategoryName(String subCategoryName) {
+        this.subCategoryName = subCategoryName;
+    }
+    public String getProductCode() {
+        return this.productCode;
+    }
+    
+    public void setProductCode(String productCode) {
+        this.productCode = productCode;
+    }
+    public String getReference01() {
+        return this.reference01;
+    }
+    
+    public void setReference01(String reference01) {
+        this.reference01 = reference01;
+    }
+    public String getReference02() {
+        return this.reference02;
+    }
+    
+    public void setReference02(String reference02) {
+        this.reference02 = reference02;
+    }
+    public String getReference03() {
+        return this.reference03;
+    }
+    
+    public void setReference03(String reference03) {
+        this.reference03 = reference03;
+    }
+    public String getReference04() {
+        return this.reference04;
+    }
+    
+    public void setReference04(String reference04) {
+        this.reference04 = reference04;
+    }
+    public String getReference05() {
+        return this.reference05;
+    }
+    
+    public void setReference05(String reference05) {
+        this.reference05 = reference05;
+    }
+    public String getReference06() {
+        return this.reference06;
+    }
+    
+    public void setReference06(String reference06) {
+        this.reference06 = reference06;
+    }
+    public String getReference07() {
+        return this.reference07;
+    }
+    
+    public void setReference07(String reference07) {
+        this.reference07 = reference07;
+    }
+    public String getReference08() {
+        return this.reference08;
+    }
+    
+    public void setReference08(String reference08) {
+        this.reference08 = reference08;
+    }
+    public String getReference09() {
+        return this.reference09;
+    }
+    
+    public void setReference09(String reference09) {
+        this.reference09 = reference09;
+    }
+    public String getReference10() {
+        return this.reference10;
+    }
+    
+    public void setReference10(String reference10) {
+        this.reference10 = reference10;
     }
     public Integer getCreatedBy() {
         return this.createdBy;
@@ -88,12 +210,26 @@ public class Product  implements java.io.Serializable {
     public void setUpdatedTimestamp(Date updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
     }
-    public Set getCategories() {
-        return this.categories;
+    public Set getComments() {
+        return this.comments;
     }
     
-    public void setCategories(Set categories) {
-        this.categories = categories;
+    public void setComments(Set comments) {
+        this.comments = comments;
+    }
+    public Set getStoreProducts() {
+        return this.storeProducts;
+    }
+    
+    public void setStoreProducts(Set storeProducts) {
+        this.storeProducts = storeProducts;
+    }
+    public Set getReviews() {
+        return this.reviews;
+    }
+    
+    public void setReviews(Set reviews) {
+        this.reviews = reviews;
     }
 
 

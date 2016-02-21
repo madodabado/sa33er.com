@@ -1,5 +1,5 @@
 package model;
-// Generated Feb 10, 2016 1:49:24 PM by Hibernate Tools 4.3.1
+// Generated Feb 21, 2016 4:25:01 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -13,35 +13,29 @@ public class Category  implements java.io.Serializable {
 
 
      private Integer categoryId;
-     private Product product;
-     private String productName;
      private String categoryName;
-     private String description;
+     private String categoryDescription;
      private Integer createdBy;
      private Date createdTimestamp;
      private Integer updatedBy;
      private Date updatedTimestamp;
-     private String categorycol;
      private Set subCategories = new HashSet(0);
 
     public Category() {
     }
 
 	
-    public Category(Product product, String productName) {
-        this.product = product;
-        this.productName = productName;
+    public Category(String categoryName, String categoryDescription) {
+        this.categoryName = categoryName;
+        this.categoryDescription = categoryDescription;
     }
-    public Category(Product product, String productName, String categoryName, String description, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, String categorycol, Set subCategories) {
-       this.product = product;
-       this.productName = productName;
+    public Category(String categoryName, String categoryDescription, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set subCategories) {
        this.categoryName = categoryName;
-       this.description = description;
+       this.categoryDescription = categoryDescription;
        this.createdBy = createdBy;
        this.createdTimestamp = createdTimestamp;
        this.updatedBy = updatedBy;
        this.updatedTimestamp = updatedTimestamp;
-       this.categorycol = categorycol;
        this.subCategories = subCategories;
     }
    
@@ -52,20 +46,6 @@ public class Category  implements java.io.Serializable {
     public void setCategoryId(Integer categoryId) {
         this.categoryId = categoryId;
     }
-    public Product getProduct() {
-        return this.product;
-    }
-    
-    public void setProduct(Product product) {
-        this.product = product;
-    }
-    public String getProductName() {
-        return this.productName;
-    }
-    
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
     public String getCategoryName() {
         return this.categoryName;
     }
@@ -73,12 +53,12 @@ public class Category  implements java.io.Serializable {
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
-    public String getDescription() {
-        return this.description;
+    public String getCategoryDescription() {
+        return this.categoryDescription;
     }
     
-    public void setDescription(String description) {
-        this.description = description;
+    public void setCategoryDescription(String categoryDescription) {
+        this.categoryDescription = categoryDescription;
     }
     public Integer getCreatedBy() {
         return this.createdBy;
@@ -107,13 +87,6 @@ public class Category  implements java.io.Serializable {
     
     public void setUpdatedTimestamp(Date updatedTimestamp) {
         this.updatedTimestamp = updatedTimestamp;
-    }
-    public String getCategorycol() {
-        return this.categorycol;
-    }
-    
-    public void setCategorycol(String categorycol) {
-        this.categorycol = categorycol;
     }
     public Set getSubCategories() {
         return this.subCategories;

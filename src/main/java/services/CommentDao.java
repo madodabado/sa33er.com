@@ -7,33 +7,33 @@ package services;
 
 import exceptionshandler.DataAccessLayerException;
 import java.util.List;
-import model.Authority;
+import model.Comment;
 
 /**
  *
  * @author Mado
  */
-public class AuthorityDao extends AbstractDao {
-    public AuthorityDao(){
+public class CommentDao extends AbstractDao {
+    
+    public CommentDao(){
         super();
     }
     
-    
      /**
      * 
-     * @param authority
+     * @param comment
      * @throws DataAccessLayerException 
      */
-      public void create(Authority authority) throws DataAccessLayerException {
-        super.saveOrUpdate(authority);
+      public void create(Comment comment) throws DataAccessLayerException {
+        super.saveOrUpdate(comment);
     }
       /**
        * 
-       * @param authority
+       * @param comment
        * @throws DataAccessLayerException 
        */
-     public void delete(Authority authority) throws DataAccessLayerException {
-        super.delete(authority);
+     public void delete(Comment comment) throws DataAccessLayerException {
+        super.delete(comment);
     }
       /**
        * 
@@ -43,16 +43,16 @@ public class AuthorityDao extends AbstractDao {
        */
         public List find(int Id) throws DataAccessLayerException {
            
-        return  super.find(Authority.class, Id ,"auth_id");
+        return  super.find(Comment.class, Id ,"comment_id");
         
     }
         /**
          * 
-         * @param authority
+         * @param comment
          * @throws DataAccessLayerException 
          */
-         public void update(Authority authority) throws DataAccessLayerException {
-        super.saveOrUpdate(authority);
+         public void update(Comment comment) throws DataAccessLayerException {
+        super.saveOrUpdate(comment);
     }
          /**
           * 
@@ -60,10 +60,14 @@ public class AuthorityDao extends AbstractDao {
           * @throws DataAccessLayerException 
           */
            public List findAll() throws DataAccessLayerException {
-        return super.findAll(Authority.class);
-    }
+        return super.findAll(Comment.class);
+    } 
            
-           
-        
+          
+    
+    
+    
+    
+    
     
 }
