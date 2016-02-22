@@ -561,11 +561,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 
 				    <h3>Categories </h3>
                                     <ul class="f-list1"  >
-						    <li><a href="#">Categories 1</a></li>
-				            <li><a href="#">Categories 2 </a></li>
-				            <li><a href="#">Categories 3</a></li>
-                                            
-				             
+                                        <c:forEach var="category"  items="${category}">
+                                        <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
+				            
+				             </c:forEach>
 			         	</ul>
  				
 		
