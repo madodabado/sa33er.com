@@ -310,6 +310,13 @@
                                           
                                           
                                           </select>
+                                               <p class="code">Gender</p>
+                                               <select style="width: 100px" type="text" name="gender" id="gender" value="Gender" onchange="change_year(this.value)" class="frm-field required code"> 
+                                          <option value="null">Gender</option> 
+                                           
+                             <option value="M">Female</option>
+		            <option value="F">Male</option>
+                                               </select>
 		    			<div><input type="text" name="email" id="email" value="E-Mail" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'E-Mail';}"></div>
 		    			<div><input type="text" name="password" id="password" value="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}"></div>
 		    	 </div>

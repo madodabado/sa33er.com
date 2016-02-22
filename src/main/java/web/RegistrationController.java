@@ -30,23 +30,24 @@ public class RegistrationController {
             @RequestParam("fname") String firstName,@RequestParam("lname") String lastName,@RequestParam("year") String year
     ,@RequestParam("month") String month,@RequestParam("day") String day,@RequestParam("email") String email
     ,@RequestParam("password") String Password,@RequestParam("address1") String address1,@RequestParam("address2") String address2,
-    @RequestParam("country") String country,@RequestParam("city") String city , @RequestParam("countryCode") String countryCode , @RequestParam("phoneNumber") String phoneNumber) throws ParseException{
+    @RequestParam("country") String country,@RequestParam("city") String city , @RequestParam("countryCode") String countryCode , @RequestParam("phoneNumber") String phoneNumber , @RequestParam("gender") String gender) throws ParseException{
       String birthOfDate = year+"-"+month+"-"+day;
       DateFormat format = new SimpleDateFormat("yyyy-MMMM-d", Locale.ENGLISH);
       Date date =format.parse(birthOfDate);
     User user = new User();
    
+    user.setAddress01(address1);
     
-    user.setAddress1(address1);
-    user.setAddress2(address2);
+    user.setAddress02(address2);
     user.setBirthOfDate(date);
     user.setCity(city);
     user.setCountry(country);
     user.setEmail(email);
-    user.setFname(firstName);
+    user.setFirstName(firstName);
     user.setPassword(Password);
     user.setPhoneNumber(phoneNumber);
-    user.setSname(lastName);
+    user.setLastName(lastName);
+    user.setGender(gender);
     
     UserDao userDao= new UserDao();
     userDao.create(user);
