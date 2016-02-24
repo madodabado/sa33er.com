@@ -94,91 +94,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	    <div class="wrap">
 			<div class="header-bottom-left">
 				<div class="logo">
-                                    <a href="/"><img src="<c:url value="/resources/images/logo.png" />" alt="" height="100px"/></a>
+                                    <a href="/"><img src="<c:url value="/resources/images/logo.png" />" alt="" height="70px"/></a>
 				</div>
-				<div class="menu">
+                                <div class="menu" style="margin-left: 100px">
 	            <ul class="megamenu skyblue">
-			<li class="active grid"><a href="/">Home</a></li>
+			<li class="active grid" > <a href="/">Home</a></li>
 			<li><a class="color4" href="#">Categories</a>
-				<div class="megapanel">
-					<div class="row">
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Contact Lenses</h4>
+				<div class="megapanel" >
+                                    <div class="row" >
+						<div class="col1" >
+							<div class="h_nav"  >
+								<h4>Categories </h4>
 								<ul>
-									<li><a href="womens.html">Daily-wear soft lenses</a></li>
-									<li><a href="womens.html">Extended-wear</a></li>
-									<li><a href="womens.html">Lorem ipsum </a></li>
-									<li><a href="womens.html">Planned replacement</a></li>
+									 <c:forEach var="category"  items="${category}">
+                                        <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
+				            
+				             </c:forEach>
 								</ul>	
 							</div>							
 						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="womens.html">Heart-Shaped</a></li>
-									<li><a href="womens.html">Square-Shaped</a></li>
-									<li><a href="womens.html">Round-Shaped</a></li>
-									<li><a href="womens.html">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="womens.html">Anti Reflective</a></li>
-									<li><a href="womens.html">Aspheric</a></li>
-									<li><a href="womens.html">Bifocal</a></li>
-									<li><a href="womens.html">Hi-index</a></li>
-									<li><a href="womens.html">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
+						
+						
 					  </div>
 					</div>
 				</li>				
-				<li><a class="color5" href="#">Men</a>
-				<div class="megapanel">
-					<div class="col1">
-							<div class="h_nav">
-								<h4>Contact Lenses</h4>
-								<ul>
-									<li><a href="mens.html">Daily-wear soft lenses</a></li>
-									<li><a href="mens.html">Extended-wear</a></li>
-									<li><a href="mens.html">Lorem ipsum </a></li>
-									<li><a href="mens.html">Planned replacement</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Sun Glasses</h4>
-								<ul>
-									<li><a href="mens.html">Heart-Shaped</a></li>
-									<li><a href="mens.html">Square-Shaped</a></li>
-									<li><a href="mens.html">Round-Shaped</a></li>
-									<li><a href="mens.html">Oval-Shaped</a></li>
-								</ul>	
-							</div>							
-						</div>
-						<div class="col1">
-							<div class="h_nav">
-								<h4>Eye Glasses</h4>
-								<ul>
-									<li><a href="mens.html">Anti Reflective</a></li>
-									<li><a href="mens.html">Aspheric</a></li>
-									<li><a href="mens.html">Bifocal</a></li>
-									<li><a href="mens.html">Hi-index</a></li>
-									<li><a href="mens.html">Progressive</a></li>
-								</ul>	
-							</div>												
-						</div>
-					</div>
-				</li>
-				<li><a class="color6" href="other.html">Other</a></li>
-				<li><a class="color7" href="other.html">Purchase</a></li>
+				
 			</ul>
 			</div>
 		</div>
@@ -238,7 +178,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
            
 		<div class="section group">
 		  <div class="cont span_2_of_3">
-		  	<h2 class="head">Featured Products</h2>
+		  	<h2 class="head">Weekly best price</h2>
 			<div class="top-box">
 			 <div class="col_1_of_3 span_1_of_3"> 
 			   <a href="single.html">
