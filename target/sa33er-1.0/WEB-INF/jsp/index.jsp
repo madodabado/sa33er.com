@@ -105,9 +105,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="col1" >
 							<div class="h_nav"  >
 								<h4>Categories </h4>
-								<ul>
+								<ul >
 									 <c:forEach var="category"  items="${category}">
-                                        <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
+                                        <li style="width:2000px " value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
 				            
 				             </c:forEach>
 								</ul>	
