@@ -1,36 +1,35 @@
-<?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
-"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
-<!-- Generated Feb 21, 2016 4:25:02 PM by Hibernate Tools 4.3.1 -->
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 25, 2016 3:14:13 PM by Hibernate Tools 4.3.1 -->
 <hibernate-mapping>
-    <class name="model.Permission" table="permission" catalog="Sa33er" optimistic-lock="version">
-        <id name="permissionId" type="java.lang.Integer">
-            <column name="permission_id" />
-            <generator class="identity" />
-        </id>
-        <property name="permissionName" type="string">
-            <column name="permission_name" length="100" not-null="true" />
-        </property>
-        <property name="permissionDescription" type="string">
-            <column name="permission_description" length="200" not-null="true" />
-        </property>
-        <property name="createdBy" type="java.lang.Integer">
-            <column name="created_by" />
-        </property>
-        <property name="createdTimestamp" type="timestamp">
-            <column name="created_timestamp" length="19" />
-        </property>
-        <property name="updatedBy" type="java.lang.Integer">
-            <column name="updated_by" />
-        </property>
-        <property name="updatedTimestamp" type="timestamp">
-            <column name="updated_timestamp" length="19" />
-        </property>
-        <set name="userPermissions" table="user_permission" inverse="true" lazy="true" fetch="select">
-            <key>
-                <column name="permission_id" not-null="true" />
-            </key>
-            <one-to-many class="model.UserPermission" />
-        </set>
-    </class>
+  <class catalog="Sa33er" name="model.Permission" optimistic-lock="version" table="permission">
+    <id name="permissionId" type="java.lang.Integer">
+      <column name="permission_id"/>
+      <generator class="identity"/>
+    </id>
+    <property name="permissionName" type="string">
+      <column length="100" name="permission_name" not-null="true"/>
+    </property>
+    <property name="permissionDescription" type="string">
+      <column length="200" name="permission_description" not-null="true"/>
+    </property>
+    <property name="createdBy" type="java.lang.Integer">
+      <column name="created_by"/>
+    </property>
+    <property name="createdTimestamp" type="timestamp">
+      <column length="19" name="created_timestamp"/>
+    </property>
+    <property name="updatedBy" type="java.lang.Integer">
+      <column name="updated_by"/>
+    </property>
+    <property name="updatedTimestamp" type="timestamp">
+      <column length="19" name="updated_timestamp"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="userPermissions" table="user_permission">
+      <key>
+        <column name="permission_id" not-null="true"/>
+      </key>
+      <one-to-many class="model.UserPermission"/>
+    </set>
+  </class>
 </hibernate-mapping>

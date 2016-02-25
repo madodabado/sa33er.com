@@ -33,6 +33,7 @@ public class HelloController {
      @RequestMapping("/")
     public String index(Model model, HttpSession session){
          Collection categoryBeans = new ArrayList();
+          Collection productBeans = new ArrayList();
          Category category = new Category();
         CategoryDao categoryDao = new CategoryDao();
         List categoryList = categoryDao.findAll();
@@ -46,8 +47,11 @@ public class HelloController {
         }
 
         model.addAttribute("category", categoryBeans);
+        ProductController productController=new ProductController();
+        productBeans=productController.getProducts();
         
         
+        model.addAttribute("product" , productBeans);
         
         
         return "index";

@@ -1,5 +1,5 @@
 package model;
-// Generated Feb 21, 2016 4:25:01 PM by Hibernate Tools 4.3.1
+// Generated Feb 25, 2016 3:14:11 PM by Hibernate Tools 4.3.1
 
 
 import java.util.Date;
@@ -18,6 +18,8 @@ public class Product  implements java.io.Serializable {
      private String productDescription;
      private String subCategoryName;
      private String productCode;
+     private Double price;
+     private String imageUrl;
      private String reference01;
      private String reference02;
      private String reference03;
@@ -45,12 +47,14 @@ public class Product  implements java.io.Serializable {
         this.productName = productName;
         this.subCategoryName = subCategoryName;
     }
-    public Product(SubCategory subCategory, String productName, String productDescription, String subCategoryName, String productCode, String reference01, String reference02, String reference03, String reference04, String reference05, String reference06, String reference07, String reference08, String reference09, String reference10, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set comments, Set storeProducts, Set reviews) {
+    public Product(SubCategory subCategory, String productName, String productDescription, String subCategoryName, String productCode, Double price, String imageUrl, String reference01, String reference02, String reference03, String reference04, String reference05, String reference06, String reference07, String reference08, String reference09, String reference10, Integer createdBy, Date createdTimestamp, Integer updatedBy, Date updatedTimestamp, Set comments, Set storeProducts, Set reviews) {
        this.subCategory = subCategory;
        this.productName = productName;
        this.productDescription = productDescription;
        this.subCategoryName = subCategoryName;
        this.productCode = productCode;
+       this.price = price;
+       this.imageUrl = imageUrl;
        this.reference01 = reference01;
        this.reference02 = reference02;
        this.reference03 = reference03;
@@ -111,6 +115,20 @@ public class Product  implements java.io.Serializable {
     
     public void setProductCode(String productCode) {
         this.productCode = productCode;
+    }
+    public Double getPrice() {
+        return this.price;
+    }
+    
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+    public String getImageUrl() {
+        return this.imageUrl;
+    }
+    
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
     public String getReference01() {
         return this.reference01;
