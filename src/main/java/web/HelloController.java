@@ -57,13 +57,13 @@ public class HelloController {
         return "index";
     }
     
-    @RequestMapping("/hello")
+    @RequestMapping("/menu")
     
- public String hello(@RequestParam(value="name", required=false, defaultValue="World") String name, Model model) {
+ public String hello( Model model) {
   
-   model.addAttribute("name", name);
-   //returns the view name
-   return "helloworld";
+
+   
+   return "menu";
  
  }
  
@@ -75,12 +75,8 @@ public class HelloController {
  }
  
  
-  @RequestMapping("/registration")
- public String Regestration() {
-    
-     
-     return "registration";
- }
+  
+ 
  
  
    

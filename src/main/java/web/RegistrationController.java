@@ -63,8 +63,12 @@ public class RegistrationController {
      return "redirect:./";
  }
     
+    @RequestMapping("/registration")
+ public String Regestration() {
     
+     
+     return "registration";
     
-    
+ }
     
 }
