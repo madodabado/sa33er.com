@@ -42,7 +42,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
  <link rel='stylesheet' href='<c:url value="//fonts.googleapis.com/css?family=Exo+2"/>' type='text/css' media='all' />
  <script src='<c:url value="/resources/js/jquery1.min.js"/>'></script>
-
+ <script src='<c:url   value="http://code.jquery.com/jquery-latest.js"/>'></script>
 <!-- start menu -->
 <link href="<c:url value="/resources/css/megamenu.css" />" rel="stylesheet">
 <script src='<c:url value="/resources/js/megamenu.js"/>'></script>
@@ -58,88 +58,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 </head>
 <body>
-     <div class="header-top">
-	   <div class="wrap"> 
-			  <div class="header-top-left">
-			  	   <div class="box">
-   				      <select tabindex="4" class="dropdown">
-							<option value="" class="label" value="">Language :</option>
-							<option value="1">English</option>
-							<option value="2">Arabic |العربية </option>
-							
-					  </select>
-   				    </div>
-   				    <div class="box1">
-   				        <select tabindex="4" class="dropdown">
-							<option value="" class="label" value="">Currency :</option>
-							<option value="1">JOD</option>
-							
-						</select>
-   				    </div>
-   				    <div class="clear"></div>
-   			 </div>
-			 <div class="cssmenu">
-				<ul>
-					
-					
-					
-					<li><a href="./login">Log In</a></li> |
-					<li><a href="./registration">Sign Up</a></li>
-				</ul>
-			</div>
-			<div class="clear"></div>
- 		</div>
-	</div>
-	<div class="header-bottom">
-	    <div class="wrap">
-			<div class="header-bottom-left">
-				<div class="logo">
-                                    <a href="/"><img src="<c:url value="/resources/images/logo.png" />" alt="" height="70px"/></a>
-				</div>
-                                <div class="menu" style="margin-left: 100px">
-	            <ul class="megamenu skyblue">
-			<li class="active grid" > <a href="/">Home</a></li>
-			<li><a class="color4" href="#">Categories</a>
-				<div class="megapanel" >
-                                    <div class="row" >
-						<div class="col1" >
-							<div class="h_nav"  >
-								<h4>Categories </h4>
-								<ul >
-									 <c:forEach var="category"  items="${category}">
-                                        <li style="width:2000px " value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
-				            
-				             </c:forEach>
-								</ul>	
-							</div>							
-						</div>
-						
-						
-					  </div>
-					</div>
-				</li>				
-				
-			</ul>
-			</div>
-		</div>
-	   <div class="header-bottom-right">
-         <div class="search">	  
-				<input type="text" name="s" class="textbox" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-				<input type="submit" value="Subscribe" id="submit" name="submit">
-				<div id="response"> </div>
-		 </div>
+     <jsp:include page="/menu"/> 
 	
-    </div>
-     <div class="clear"></div>
-     </div>
-	</div>
   <!-- start slider -->
 <div class="banner-slider">
 				<div class="callbacks_container">
 					<ul class="rslides" id="slider4">
 					    <li>
 						  <div class="banner-img">
-                                                      <img src="<c:url  value="http://res.cloudinary.com/mughrabi/image/upload/v1455374176/panel_bsrvlz.jpg" />" class="img-responsive"  alt="" />
+                                                      <img src="<c:url  value="http://res.cloudinary.com/sa33er/image/upload/panel.jpg" />" class="img-responsive"  alt="" />
 						  </div>
 						    <h4 >Sa333er.com</h4>
 						     <h5>Priceless</h5>
@@ -186,7 +113,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				            
 				           
                             <div class="col_1_of_3 span_1_of_3"> 
-			   <a href="single.html">
+			   <a href="./single?product_id=${product.getProductId()}">
 				<div class="inner_content clearfix">
                                     
 					<div class="product_image">
@@ -213,180 +140,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		
 	        		 						 			    
 		  </div>
-                                        <div class="rsidebar span_1_of_left" style="background-color:#4cb1ca ">
-				
-                                            <div class="border" >
-                                
-				    <h3>Categories </h3>
-                                    <ul class="f-list1"  >
-                                        <c:forEach var="category"  items="${category}">
+                     <div class="rsingle span_1_of_single">
+				<h5 class="m_1">Categories</h5>
+					
+					<ul class="kids">
+						  <c:forEach var="category"  items="${category}">
                                         <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
 				            
 				             </c:forEach>
-			         	</ul>
- 				
-		
-             
-             </div>
-           
-			
-	    </div>
+					</ul>
+                  
+		   
+		    
+		  
+		     
+		     
+		       <script src="js/jquery.easydropdown.js"></script>
+                        </div>
 	   <div class="clear"></div>
 	</div>
 	</div>
 	</div>
-   <div class="footer">
-	
-		<div class="footer-middle">
-			<div class="wrap">
-			 <!-- <div class="section group">
-			  	<div class="f_10">
-					<div class="col_1_of_4 span_1_of_4">
-						<h3>Facebook</h3>
-						<script>(function(d, s, id) {
-						  var js, fjs = d.getElementsByTagName(s)[0];
-						  if (d.getElementById(id)) return;
-						  js = d.createElement(s); js.id = id;
-						  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-						  fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
-						<div class="like_box">	
-							<div class="fb-like-box" data-href="http://www.facebook.com/w3layouts" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-						</div>
-					</div>
-					<div class="col_1_of_4 span_1_of_4">
-						<h3>From Twitter</h3>
-						<div class="recent-tweet">
-							<div class="recent-tweet-icon">
-								<span> </span>
-							</div>
-							<div class="recent-tweet-info">
-								<p>Ds which don't look even slightly believable. If you are <a href="#">going to use nibh euismod</a> tincidunt ut laoreet adipisicing</p>
-							</div>
-							<div class="clear"> </div>
-						</div>
-						<div class="recent-tweet">
-							<div class="recent-tweet-icon">
-								<span> </span>
-							</div>
-							<div class="recent-tweet-info">
-								<p>Ds which don't look even slightly believable. If you are <a href="#">going to use nibh euismod</a> tincidunt ut laoreet adipisicing</p>
-							</div>
-							<div class="clear"> </div>
-						</div>
-					</div>
-				</div>
-				<div class="f_10">
-					<div class="col_1_of_4 span_1_of_4">
-					    <h3>Information</h3>
-						<ul class="f-list1">
-						    <li><a href="#">Duis autem vel eum iriure </a></li>
-				            <li><a href="#">anteposuerit litterarum formas </a></li>
-				            <li><a href="#">Tduis dolore te feugait nulla</a></li>
-				             <li><a href="#">Duis autem vel eum iriure </a></li>
-				            <li><a href="#">anteposuerit litterarum formas </a></li>
-				            <li><a href="#">Tduis dolore te feugait nulla</a></li>
-			         	</ul>
-					</div>
-					<div class="col_1_of_4 span_1_of_4">
-						<h3>Contact us</h3>
-						<div class="company_address">
-					                <p>500 Lorem Ipsum Dolor Sit,</p>
-							   		<p>22-56-2-9 Sit Amet, Lorem,</p>
-							   		<p>USA</p>
-					   		<p>Phone:(00) 222 666 444</p>
-					   		<p>Fax: (000) 000 00 00 0</p>
-					 	 	<p>Email: <a href="mailto:info@gmail.com">mail[at]leoshop.com</a></p>
-					   		
-					   </div>
-					   <div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Linked in"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Rss"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-					</div>
-				<div class="clear"></div>
-			</div>
-			<div class="clear"></div>
-		  </div>-->
-		   
-		   
-		   
-		   
-		   
-		   <div class="section group example">
-			  <div class="col_1_of_f_1 span_1_of_f_1">
-				 <div class="section group example">
-				   <div class="col_1_of_f_2 span_1_of_f_2">
-				      <h3>Facebook</h3>
-						<script>(function(d, s, id) {
-						  var js, fjs = d.getElementsByTagName(s)[0];
-						  if (d.getElementById(id)) return;
-						  js = d.createElement(s); js.id = id;
-						  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-						  fjs.parentNode.insertBefore(js, fjs);
-						}(document, 'script', 'facebook-jssdk'));</script>
-						<div class="like_box">	
-							<div class="fb-like-box" data-href="https://www.facebook.com/MADFISH-323439434528465/?fref=ts" data-colorscheme="light" data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-						</div>
- 				  </div>
-				
-				<div class="clear"></div>
-		      </div>
- 			 </div>
-			 <div class="col_1_of_f_1 span_1_of_f_1">
-			   <div class="section group example">
-				 <div class="col_1_of_f_2 span_1_of_f_2">
-				    <h3>Information</h3>
-						<ul class="f-list1">
-						    <li><a href="#">What is sa33er.com ?</a></li>
-				            <li><a href="#">why sa33er.com</a></li>
-				            <li><a href="#">Our vision</a></li>
-				             
-			         	</ul>
- 				 </div>
-				 <div class="col_1_of_f_2 span_1_of_f_2">
-				   <h3>Contact us</h3>
-						<div class="company_address">
-					             
-					 	 	<p>Email: <a href="mailto:info@gmail.com">info@sa33er.com</a></p>
-					   		
-					   </div>
-					   <div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="Google"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Linked in"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Rss"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Facebook"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-				</div>
-				<div class="clear"></div>
-		    </div>
-		   </div>
-		  <div class="clear"></div>
-		    </div>
-		  </div>
-		</div>
-		<div class="footer-bottom">
-			<div class="wrap">
-	             <div class="copy">
-			        <p>© 2016 Sa33er.com. All rights reserved </p>
-		         </div>
-				<div class="f-list2">
-				 <ul>
-					<li class="active"><a href="about.html">About Us</a></li> |
-					
-					<li><a href="delivery.html">Terms & Conditions</a></li> |
-					<li><a href="contact.html">Contact Us</a></li> 
-				 </ul>
-			    </div>
-			    <div class="clear"></div>
-		      </div>
-	     </div>
-	</div>
+     <jsp:include page="/footer"/> 
+  
 </body>
 </html>

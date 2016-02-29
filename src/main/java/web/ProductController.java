@@ -37,5 +37,23 @@ public class ProductController {
         return productBeans;
         
     }
+      public Collection getProducts(int id){
+        
+        
+         Collection productBeans = new ArrayList();
+         Product product = new Product();
+        ProductDao productDao = new ProductDao();
+        List productList = productDao.find(id);
+        Iterator categoryIterator = productList.iterator();
+
+        while (categoryIterator.hasNext()) {
+            product = (Product) categoryIterator.next();
+
+            productBeans.add(product);
+
+        } 
+        return productBeans;
+        
+    }
     
 }

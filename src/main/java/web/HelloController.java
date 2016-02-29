@@ -59,9 +59,23 @@ public class HelloController {
     
     @RequestMapping("/menu")
     
- public String hello( Model model) {
+ public String menu( Model model) {
   
+Collection categoryBeans = new ArrayList();
+          Collection productBeans = new ArrayList();
+         Category category = new Category();
+        CategoryDao categoryDao = new CategoryDao();
+        List categoryList = categoryDao.findAll();
+        Iterator categoryIterator = categoryList.iterator();
 
+        while (categoryIterator.hasNext()) {
+            category = (Category) categoryIterator.next();
+
+            categoryBeans.add(category);
+
+        }
+
+        model.addAttribute("category", categoryBeans);
    
    return "menu";
  
@@ -72,6 +86,13 @@ public class HelloController {
     
      
      return "login";
+ }
+ 
+   @RequestMapping("/footer")
+ public String footer(Model model) {
+    
+     
+     return "footer";
  }
  
  

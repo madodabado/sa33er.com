@@ -44,7 +44,7 @@ public class ProductDao extends AbstractDao {
        */
         public List find(int Id) throws DataAccessLayerException {
            
-        return  super.find(Product.class, Id ,"produt_id");
+        return  super.find(Product.class, Id ,"product_id");
         
     }
         /**
