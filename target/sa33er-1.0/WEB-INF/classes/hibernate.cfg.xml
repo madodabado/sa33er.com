@@ -4,7 +4,7 @@
   <session-factory>
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-    <property name="hibernate.connection.url">jdbc:mysql://104.131.168.21:3306/Sa33er?zeroDateTimeBehavior=convertToNull</property>
+    <property name="hibernate.connection.url">jdbc:mysql://104.131.168.21:3306/Sa33er?autoReconnect=true</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">madodabado</property>
     <mapping resource="model/StoreProduct.hbm.xml"/>

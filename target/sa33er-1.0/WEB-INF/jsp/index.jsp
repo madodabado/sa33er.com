@@ -15,6 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 -->
 <!DOCTYPE HTML>
 <html>
+
 <head>
 <title>Sa33er.com</title>
 <link rel="apple-touch-icon" sizes="57x57" href="<c:url  value="/resources/images/apple-icon-57x57.png" />">
@@ -42,7 +43,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
  <link rel='stylesheet' href='<c:url value="//fonts.googleapis.com/css?family=Exo+2"/>' type='text/css' media='all' />
  <script src='<c:url value="/resources/js/jquery1.min.js"/>'></script>
- <script src='<c:url   value="http://code.jquery.com/jquery-latest.js"/>'></script>
+
+ 
 <!-- start menu -->
 <link href="<c:url value="/resources/css/megamenu.css" />" rel="stylesheet">
 <script src='<c:url value="/resources/js/megamenu.js"/>'></script>
@@ -55,6 +57,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
    
 <!--end slider -->
 <script src='<c:url value="/resources/js/jquery.easydropdown.js"/>'></script>
+<script src='<c:url value="/resources/js/calander.js"/>'></script>
+
 
 </head>
 <body>

@@ -16,33 +16,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-<link href="<c:url value="/resources/css/style.css" />" rel="stylesheet">
-<link href="<c:url value="/resources/css/form.css" />" rel="stylesheet">
- <link rel='stylesheet' href='<c:url value="//fonts.googleapis.com/css?family=Exo+2"/>' type='text/css' media='all' />
- 
-
-<script src='<c:url value="/resources/js/jquery1.min.js"/>'></script>
- <script src='<c:url   value="http://code.jquery.com/jquery-latest.js"/>'></script>
-<!-- start menu -->
-<link href="<c:url value="/resources/css/megamenu.css" />" rel="stylesheet">
-<script src='<c:url value="/resources/js/megamenu.js"/>'></script>
-
-<script>$(document).ready(function(){$(".megamenu").megamenu();});</script>
-<!--start slider -->
-<script src='<c:url value="/resources/js/jquery-ui.min.js"/>'></script>
-    
-  
-   
-<!--end slider -->
-<script src='<c:url value="/resources/js/jquery.easydropdown.js"/>'></script>
 </head>
     <body>
         
@@ -87,7 +61,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <div class="menu" style="margin-left: 100px">
 	            <ul class="megamenu skyblue">
 			<li class="active grid" > <a href="/">Home</a></li>
-			<li><a class="color4" href="#">Categories</a>
+			<li><a class="color4" href="./categories">Categories</a>
 				<div class="megapanel" >
                                     <div class="row" >
 						<div class="col1" >
