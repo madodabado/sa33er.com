@@ -34,6 +34,13 @@ public class ProductController {
             productBeans.add(product);
 
         } 
+        
+        productBeans=null;
+        product=null;
+        productDao=null;
+        productList=null;
+        categoryIterator=null;
+        
         return productBeans;
         
     }

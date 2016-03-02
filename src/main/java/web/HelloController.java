@@ -53,7 +53,14 @@ public class HelloController {
         
         model.addAttribute("product" , productBeans);
         
+        category=null;
+        categoryDao=null;
+        categoryList=null;
+        categoryIterator = null;
         
+        categoryBeans=null;
+        productController=null;
+        productBeans=null;
         return "index";
     }
     
