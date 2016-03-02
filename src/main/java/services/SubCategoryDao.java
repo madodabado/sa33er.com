@@ -62,7 +62,17 @@ public class SubCategoryDao extends AbstractDao {
         return super.findAll(SubCategory.class);
     } 
            
-          
+    /**
+     *
+     * @param Id
+     * @return
+     * @throws DataAccessLayerException
+     */
+    public List findSubCategory(int Id) throws DataAccessLayerException {
+           
+        return  super.find(SubCategory.class, Id ,"category_id");
+        
+    }
     
     
     

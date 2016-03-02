@@ -69,7 +69,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<h4>Categories </h4>
 								<ul >
 									 <c:forEach var="category"  items="${category}">
-                                        <li style="width:2000px " value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
+                                        <li style="width:2000px " value= "${category.getCategoryId()}"><a href="./sub-category?category_id=${category.getCategoryId()}"> ${category.getCategoryName()}</a></li>
 				            
 				             </c:forEach>
 								</ul>	

@@ -1,5 +1,5 @@
 <%-- 
-    Document   : single
+    Document   : subcategory
     Created on : Feb 25, 2016, 4:41:26 PM
     Author     : Mado
 --%>
@@ -65,13 +65,13 @@
             
 	
         <div class="clear"></div>
-         <c:forEach var="product"  items="${product}">
+       
 <div class="mens">    
   <div class="main">
      <div class="wrap">
      	
 		<div class="cont span_2_of_3">
-		  	<div class="grid images_3_of_2">
+                    <div class="grid images_3_of_2" style="width: auto;">
 						<!-- FlexSlider -->
 						<script src="js/imagezoom.js"></script>
 							<script defer src="js/jquery.flexslider.js"></script>
@@ -85,83 +85,46 @@
 									 });
 								});
 							</script>
-						<!-- //FlexSlider-->
-						<div class="flexslider">
-							  <ul class="slides">
-								<li data-thumb="images/s1.jpg">
-									<div class="thumb-image"> <img src="<c:url   value="http://res.cloudinary.com/sa33er/image/upload/w_478,h_595/${product.getImageUrl()}.jpg"/>" alt=""/> </div>
-								</li>
-								
-							  </ul>
-							<div class="clearfix"></div>
-					</div>		
-
+					
+					  <div class="cont span_2_of_3">
+		  	<h2 class="head">sub category</h2>
+			<div class="top-box">
+			
+                             <c:forEach var="subCategory"  items="${subCategory}">
+                                       
+				            
+				           
+                                 <div class="col_1_of_3 span_1_of_3" style="width:auto;"> 
+			   <a href="./single?category_id=${subCategory.getSubCategoryId()}">
+				<div class="inner_content clearfix">
+                                    
+					
+                  
+                    <div class="price">
+					   <div class="cart-left">
+							<p class="title">${subCategory.getSubCategoryName()}</p>
+							
+						</div>
+						
+						<div class="clear"></div>
+					 </div>				
+                   </div>
+                 </a>
+				</div>
+			  </c:forEach>
+				
+				<div class="clear"></div>
+			</div>	
+		
+	        		 						 			    
+		  </div>
 
 
 	            </div>
-		         <div class="desc1 span_3_of_2">
-		         	<h3 class="m_3">${product.getProductName()}</h3>
-		             <p class="m_5">${product.getPrice()}</p>
-		         	
-					
-				     <p class="m_text2">${product.getProductDescription()}</p>
-			     </div>
+		   
 			   <div class="clear"></div>	
-	    <div class="clients">
-	    
-		
-	<script type="text/javascript">
-		$(window).load(function() {
-			$("#flexiselDemo1").flexisel();
-			$("#flexiselDemo2").flexisel({
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		
-			$("#flexiselDemo3").flexisel({
-				visibleItems: 5,
-				animationSpeed: 1000,
-				autoPlay: false,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		    
-		});
-	</script>
-	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-     </div>
-     <div class="toogle">
-     	<h3 class="m_3">Product Details</h3>
-        <p>${product.getProductDescription()}</p>
-     </div>
+	
+    
     
       </div>
 			<div class="rsingle span_1_of_single">
@@ -169,13 +132,13 @@
 					
 					<ul class="kids">
 						  <c:forEach var="category"  items="${category}">
-                                        <li value= "${category.getCategoryId()}"><a href="./sub-category?category_id=${category.getCategoryId()}"> ${category.getCategoryName()}</a></li>
+                                        <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
 				            
-				             </c:forEach>
+				          </c:forEach>
 					</ul>
                   
 		   
-		    
+		     
 		  
 		     
 		     
@@ -187,7 +150,7 @@
 			 <div class="clear"></div>
 		   </div>
 		</div>
-                                                                </c:forEach>
+                                                              
 	 <jsp:include page="/footer"/> 
 </body>
 </html>

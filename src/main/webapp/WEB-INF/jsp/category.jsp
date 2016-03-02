@@ -71,7 +71,7 @@
      <div class="wrap">
      	
 		<div class="cont span_2_of_3">
-		  	<div class="grid images_3_of_2">
+                    <div class="grid images_3_of_2" style="width: auto;">
 						<!-- FlexSlider -->
 						<script src="js/imagezoom.js"></script>
 							<script defer src="js/jquery.flexslider.js"></script>
@@ -86,63 +86,44 @@
 								});
 							</script>
 					
+					  <div class="cont span_2_of_3">
+		  	<h2 class="head">Categories</h2>
+			<div class="top-box">
+			
+                             <c:forEach var="category"  items="${category}">
+                                       
+				            
+				           
+                                 <div class="col_1_of_3 span_1_of_3" style="width:auto;"> 
+			   <a href="./sub-category?category_id=${category.getCategoryId()}">
+				<div class="inner_content clearfix">
+                                    
 					
+                  
+                    <div class="price">
+					   <div class="cart-left">
+							<p class="title">${category.getCategoryName()}</p>
+							
+						</div>
+						
+						<div class="clear"></div>
+					 </div>				
+                   </div>
+                 </a>
+				</div>
+			  </c:forEach>
+				
+				<div class="clear"></div>
+			</div>	
+		
+	        		 						 			    
+		  </div>
 
 
 	            </div>
 		   
 			   <div class="clear"></div>	
-	    <div class="clients">
-	    
-		
-	<script type="text/javascript">
-		$(window).load(function() {
-			$("#flexiselDemo1").flexisel();
-			$("#flexiselDemo2").flexisel({
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		
-			$("#flexiselDemo3").flexisel({
-				visibleItems: 5,
-				animationSpeed: 1000,
-				autoPlay: false,
-				autoPlaySpeed: 3000,    		
-				pauseOnHover: true,
-				enableResponsiveBreakpoints: true,
-		    	responsiveBreakpoints: { 
-		    		portrait: { 
-		    			changePoint:480,
-		    			visibleItems: 1
-		    		}, 
-		    		landscape: { 
-		    			changePoint:640,
-		    			visibleItems: 2
-		    		},
-		    		tablet: { 
-		    			changePoint:768,
-		    			visibleItems: 3
-		    		}
-		    	}
-		    });
-		    
-		});
-	</script>
-	<script type="text/javascript" src="js/jquery.flexisel.js"></script>
-     </div>
+	
     
     
       </div>
@@ -151,7 +132,7 @@
 					
 					<ul class="kids">
 						  <c:forEach var="category"  items="${category}">
-                                        <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
+                                        <li value= "${category.getCategoryId()}"><a href="./sub-category?category_id=${category.getCategoryId()}"> ${category.getCategoryName()}</a></li>
 				            
 				          </c:forEach>
 					</ul>

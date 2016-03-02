@@ -131,7 +131,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							  <span class="actual">${product.getPrice()} JOD</span>
 							</div>
 						</div>
-						<div class="cart-right"> </div>
+						
 						<div class="clear"></div>
 					 </div>				
                    </div>
@@ -149,7 +149,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					
 					<ul class="kids">
 						  <c:forEach var="category"  items="${category}">
-                                        <li value= "${category.getCategoryId()}"><a href="#"> ${category.getCategoryName()}</a></li>
+                                        <li value= "${category.getCategoryId()}"><a href="./sub-category?category_id=${category.getCategoryId()}"> ${category.getCategoryName()}</a></li>
 				            
 				             </c:forEach>
 					</ul>

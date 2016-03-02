@@ -28,7 +28,7 @@ public class CategoriesController {
  public String menu( Model model) {
   
 Collection categoryBeans = new ArrayList();
-         
+         Collection productBeans = new ArrayList();
          Category category = new Category();
         CategoryDao categoryDao = new CategoryDao();
         List categoryList = categoryDao.findAll();
@@ -42,7 +42,14 @@ Collection categoryBeans = new ArrayList();
         }
 
         model.addAttribute("category", categoryBeans);
-   
+    
+        
+        category=null;
+        categoryDao=null;
+        categoryList=null;
+        categoryIterator=null;
+        
+        model.addAttribute("product" , productBeans);
    return "category";
  
  }
