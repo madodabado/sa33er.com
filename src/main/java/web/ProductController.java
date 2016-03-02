@@ -35,7 +35,7 @@ public class ProductController {
 
         } 
         
-        productBeans=null;
+       
         product=null;
         productDao=null;
         productList=null;

@@ -60,7 +60,7 @@ public class HelloController {
         
         categoryBeans=null;
         productController=null;
-        productBeans=null;
+       
         return "index";
     }
     
@@ -84,6 +84,12 @@ Collection categoryBeans = new ArrayList();
 
         model.addAttribute("category", categoryBeans);
    
+          category=null;
+        categoryDao=null;
+        categoryList=null;
+        categoryIterator = null;
+        
+        
    return "menu";
  
  }
