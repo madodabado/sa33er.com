@@ -20,6 +20,7 @@ model\UserPermission.class
 services\ProductDao.class
 services\HibernateFactory.class
 web\IndexController.class
+web\UserController.class
 exceptionshandler\DataAccessLayerException.class
 model\Category.class
 web\CategoriesController.class

@@ -109,6 +109,26 @@ Collection categoryBeans = new ArrayList();
  }
  
  
+  @RequestMapping("/Login-Auth")
+ public String LoginAuth(Model model ,HttpServletRequest request, HttpSession session,
+            @RequestParam("email") String email,@RequestParam("password") String password) {
+    
+         UserController userController = new UserController();
+    String userPermission= userController.loginAuthontication(email, password);
+     
+     if (userPermission.equals("USER")){
+        return "redirect:./"; 
+     }
+     else {
+         return "login";
+     }
+    
+     
+     
+     
+ }
+ 
+ 
   
  
  

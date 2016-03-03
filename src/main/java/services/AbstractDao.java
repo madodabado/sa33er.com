@@ -175,12 +175,12 @@ public abstract class AbstractDao {
      * @param userType
      * @return 
      */
-      protected List findUserPass(Class clazz, String userName,String Password ,String userType ) {
+      protected List findUserPass(Class clazz, String email,String Password ) {
         List obj = null;
         try {
             startOperation();
            // obj = session.load(clazz, id);
-             Query query = session.createQuery("from " + clazz.getName()+" where User_Name = '"+userName +"' and password = '"+Password+"' and User_Type = '"+userType+"'" );
+             Query query = session.createQuery("from " + clazz.getName()+" where email = '"+email +"' and password = '"+Password+"'" );
               obj = query.list();
             tx.commit();
         } catch (HibernateException e) {

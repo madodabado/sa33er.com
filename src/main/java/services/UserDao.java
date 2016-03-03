@@ -64,7 +64,17 @@ public class UserDao extends AbstractDao {
         return super.findAll(User.class);
     } 
            
-          
+    /**
+     *
+     * @param email
+     * @param password
+     * @return
+     */
+    public List findUserPass(String email,String password){
+        
+        return super.findUserPass(User.class,email,password);
+        
+    }
     
     
 }

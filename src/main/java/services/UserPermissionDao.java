@@ -62,10 +62,17 @@ public class UserPermissionDao extends AbstractDao{
         return super.findAll(UserPermission.class);
     } 
            
-          
-    
-    
-    
+    /**
+     *
+     * @param Id
+     * @return
+     * @throws DataAccessLayerException
+     */
+    public List findUserPermission(int Id) throws DataAccessLayerException {
+           
+        return  super.find(UserPermission.class, Id ,"user_id");
+        
+    }
     
     
     
